@@ -48,4 +48,39 @@ body {
 }
 .header .header__menu--displayNone {
   display: none;
+}
+
+.cardOpenShop {
+  text-align: center;
+  margin: 20% 0;
+}
+.cardOpenShop .cardOpenShop__titulo {
+  margin-bottom: 5%;
+  font-family: raleway;
+  font-size: 8vw;
+}
+.cardOpenShop .cardOpenShop__descripcion {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 4vw;
+  margin: 0% 18%;
+}
+.cardOpenShop .cardOpenShop__imagen {
+  width: 100%;
+}
+
+.botonDefault {
+  width: 75%;
+  margin: 10% auto;
+  background-color: #08A6E4;
+  color: white;
+  height: 50px;
+  border-radius: 100px;
+  box-shadow: 10px 10px 10px rgba(8, 166, 228, 0.3137254902);
+}
+.botonDefault span {
+  font-size: 4vw;
+  color: white;
+  display: block;
+  padding-top: 17px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }/*# sourceMappingURL=styles.css.map */

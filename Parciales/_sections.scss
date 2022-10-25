@@ -1,0 +1,34 @@
+.cardOpenShop {
+    text-align: center;
+    margin: 20% 0;
+    .cardOpenShop__titulo {
+        margin-bottom: 5%;
+        font-family: $fontPrincipal;
+        font-size: 8vw;
+    }
+    .cardOpenShop__descripcion {
+        font-family: $fontSecundaria;
+        font-size: 4vw;
+        margin: 0% 18%;
+    }
+    .cardOpenShop__imagen {
+        width: 100%;
+    }
+}
+
+.botonDefault {
+    width: 75%;
+    margin: 10% auto;
+    background-color: $colorPrincipal;
+    color: white;
+    height: 50px;
+    border-radius: 100px;
+    box-shadow: 10px 10px 10px $colorPrincipalOpacity;
+    span {
+        font-size: 4vw;
+        color: white;
+        display: block;
+        padding-top: 17px;
+        font-family: $fontSecundaria;
+    }
+}
