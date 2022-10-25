@@ -32,3 +32,67 @@
         font-family: $fontSecundaria;
     }
 }
+
+.cardPlataformData {
+    width: 75%;
+    text-align: center;
+    margin: auto;
+    .cardPlataformData__titulo {
+        font-family: $fontPrincipal;
+        font-weight: 300;
+    }
+    .cardPlataformData__dato {
+        width: 50%;
+        margin: 10% auto 25% auto;
+        div {
+            width: 45%;
+            margin: auto;
+            .cardPlataformData__dato__backgroundCircle {
+                background-color: $colorPrincipal;
+                width: 40px;
+                height: 40px;
+                border-radius: 100px;
+                margin: auto;
+                position: absolute;
+            }
+            .cardPlataformData__dato__backgroundCircle--pink {
+                background-color: #FB3B64;
+            }
+            .cardPlataformData__dato__backgroundCircle--green {
+                background-color: #55DFB4;
+            }
+            .cardPlataformData__dato__imagen {
+                width: 50%;
+                position: relative;
+                top: 1px;
+                left: 6px;
+            }
+            .cardPlataformData__dato__imagen--eye {
+                width: 70%;
+                top: 10px;
+            }
+            .cardPlataformData__dato__imagen--catalog {
+                width: 55%;
+                left: 10px;
+                top: 5px;
+            }
+        }
+
+        .cardPlataformData__dato__numero {
+            font-family: $fontPrincipal;
+            position: relative;
+            top: 25px;
+            letter-spacing: 5px;
+        }
+        .cardPlataformData__dato__descripcion {
+            font-family: $fontPrincipal;
+            position: relative;
+            top: 40px;
+            font-weight: 400;
+            color: #A5A5A5;
+            font-size: 3vw;
+            width: 70%;
+            left: 15px;
+        }
+    }
+}
