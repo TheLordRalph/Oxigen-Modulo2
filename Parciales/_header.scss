@@ -1,14 +1,6 @@
 .header {
     padding: 0% 6% 0% 6%;
     box-shadow: 0px 5px 5px lightgray;
-    .logo {
-        font-size: 7vw;
-        padding: 8%;
-        width: 75%;
-        color: $colorPrincipal;
-        display: inline-block;
-        font-family: $fontPrincipal;
-    }
     .header__menuLogo {
         width: 6vw;
         color: $colorPrincipal;
@@ -37,4 +29,19 @@
     .header__menu--displayNone {
         display: none;
     }
+}
+
+.logo {
+    font-size: 1.5em;
+    padding: 8%;
+    width: 75%;
+    color: $colorPrincipal;
+    display: inline-block;
+    font-family: $fontPrincipal;
+    font-weight: 300;
+}
+
+.social {
+    width: 24px;
+    height: 24px;
 }
