@@ -19,9 +19,12 @@ body {
   box-shadow: 0px 5px 5px lightgray;
 }
 .header .header__menuLogo {
-  width: 6vw;
+  width: 7vw;
   color: #08A6E4;
   display: inline-block;
+  position: relative;
+  top: 0.4em;
+  margin-left: 10%;
 }
 .header .header__menu {
   padding: 0% 0% 5% 5%;
@@ -45,7 +48,7 @@ body {
 }
 
 .logo {
-  font-size: 1.5em;
+  font-size: 7vw;
   padding: 8%;
   width: 75%;
   color: #08A6E4;
@@ -66,10 +69,12 @@ body {
 .cardOpenShop .cardOpenShop__titulo {
   margin-bottom: 5%;
   font-family: "Raleway", sans-serif;
+  font-weight: 400;
   font-size: 8vw;
 }
 .cardOpenShop .cardOpenShop__descripcion {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
   font-size: 4vw;
   margin: 0% 18%;
 }
@@ -78,29 +83,29 @@ body {
 }
 
 .botonDefault {
-  width: 75%;
+  width: 60vw;
   margin: 10% auto;
   background-color: #08A6E4;
   color: white;
-  height: 50px;
+  height: 18vw;
   border-radius: 100px;
   box-shadow: 10px 10px 10px rgba(8, 166, 228, 0.3137254902);
   text-align: center;
 }
 .botonDefault span {
-  font-size: 1em;
+  font-size: 4vw;
   color: white;
   display: block;
-  padding-top: 17px;
+  padding-top: 6vw;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
 }
 
 .botonDefault--small {
-  width: 130px;
+  width: 35vw;
   position: relative;
   margin: auto;
-  bottom: 27px;
+  bottom: 9vw;
 }
 
 .botonDefault--pink {
@@ -125,6 +130,7 @@ body {
 .cardPlataformData .cardPlataformData__titulo {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
+  font-size: 8.5vw;
 }
 .cardPlataformData .cardPlataformData__dato {
   width: 50%;
@@ -139,38 +145,42 @@ body {
   position: relative;
   top: 1px;
   left: 6px;
+  margin-bottom: 20%;
 }
 .cardPlataformData .cardPlataformData__dato .cardPlataformData__dato__miniLogo .cardPlataformData__dato__miniLogo__imagen--eye {
   width: 70%;
-  top: 10px;
+  top: 2vw;
+  margin-bottom: 40%;
 }
 .cardPlataformData .cardPlataformData__dato .cardPlataformData__dato__miniLogo .cardPlataformData__dato__miniLogo__imagen--catalog {
   width: 55%;
   left: 10px;
   top: 5px;
+  margin-bottom: 30%;
 }
 .cardPlataformData .cardPlataformData__dato .cardPlataformData__dato__numero {
   font-family: "Raleway", sans-serif;
+  font-weight: 800;
   position: relative;
-  top: 25px;
-  letter-spacing: 5px;
+  letter-spacing: 1.5vw;
+  font-size: 4vw;
 }
 .cardPlataformData .cardPlataformData__dato .cardPlataformData__dato__descripcion {
   font-family: "Raleway", sans-serif;
   position: relative;
-  top: 40px;
+  top: 2vw;
   font-weight: 400;
   color: #A5A5A5;
   font-size: 3vw;
   width: 70%;
-  left: 15px;
+  left: 10%;
 }
 
 .backgroundCircle {
   background-color: #08A6E4;
-  width: 40px;
-  height: 40px;
-  border-radius: 100px;
+  width: 11vw;
+  height: 11vw;
+  border-radius: 100%;
   margin: auto;
   position: absolute;
 }
@@ -184,17 +194,17 @@ body {
 }
 
 .backgroundCircle--pink--radius {
-  border-radius: 41px;
+  border-radius: 45%;
   transform: rotate(45deg);
   position: absolute;
   left: 59%;
-  width: 50px;
-  height: 45px;
+  width: 15vw;
+  height: 13vw;
 }
 
 .backgroundCircle--big {
-  width: 100px;
-  height: 100px;
+  width: 30vw;
+  height: 30vw;
   position: absolute;
   left: 34%;
 }
@@ -212,7 +222,7 @@ body {
   border-radius: 4px;
 }
 .cardsDescription .cardsDescription__card .cardsDescription__card__imagen {
-  width: 55%;
+  width: 45vw;
   margin: 0 5%;
   margin-left: 26%;
   position: relative;
@@ -239,14 +249,14 @@ body {
   font-weight: 400;
   margin: 10% 5%;
   font-size: 6vw;
-  line-height: 30px;
+  line-height: 9vw;
 }
 .cardsDescription .cardsDescription__card .cardsDescription__card__descripccion {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   margin: 10% 5%;
   font-size: 3vw;
-  line-height: 16px;
+  line-height: 5vw;
 }
 
 .pricing {
@@ -257,32 +267,32 @@ body {
   margin-bottom: 5%;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: 10vw;
+  font-size: 9vw;
 }
 
 .cardPricing {
-  height: 210px;
-  width: 250px;
+  height: 63vw;
+  width: 70vw;
   margin: auto;
   padding: 0% 2%;
   border: 1px solid #08A6E4;
   border-radius: 10%;
 }
 .cardPricing .cardPricing__columna {
-  height: 170px;
-  width: 100px;
+  height: 55vw;
+  width: 28vw;
   position: absolute;
   margin-top: 10px;
 }
 .cardPricing .cardPricing__columna .cardPricing__columna__name {
-  margin-top: 35%;
+  margin-top: 13vw;
   width: 120%;
   font-family: "Raleway", sans-serif;
-  font-size: 17px;
+  font-size: 5vw;
   font-weight: 700;
 }
 .cardPricing .cardPricing__columna .cardPricing__columna__price {
-  font-size: 45px;
+  font-size: 14vw;
   width: 120%;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
@@ -291,14 +301,15 @@ body {
 .cardPricing .cardPricing__columna .cardPricing__columna__description {
   width: 120%;
   font-family: "Raleway", sans-serif;
-  font-size: 10px;
+  font-size: 2.5vw;
   font-weight: 700;
 }
 .cardPricing .cardPricing__columna .cardPricing__columna__ventajaDesventaja {
   display: inline-flex;
   width: 100%;
-  margin: 7% 0;
+  margin: 3.1vw 0;
   text-align: start;
+  margin-top: 4vw;
 }
 .cardPricing .cardPricing__columna .cardPricing__columna__ventajaDesventaja .cardPricing__columna__ventajaDesventaja__img {
   width: 9%;
@@ -307,11 +318,11 @@ body {
 .cardPricing .cardPricing__columna .cardPricing__columna__ventajaDesventaja .cardPricing__columna__ventajaDesventaja__titulo {
   width: 80%;
   margin-left: 10%;
-  font-size: 10px;
+  font-size: 2.6vw;
   font-weight: 400;
 }
 .cardPricing .cardPricing__columna--bigRigth {
-  width: 120px;
+  width: 33vw;
   position: relative;
   left: 53%;
 }
@@ -327,45 +338,47 @@ body {
   border-color: #55DFB4;
 }
 .cardPricing--green .cardPricing__columna .cardPricing__columna__price--green {
-  color: #55DFB4;
+  color: #FB3B64;
 }
 
 .cardPricing--big {
-  width: 290px;
-  height: 250px;
+  width: 90vw;
+  height: 65vw;
   padding-left: 3%;
   box-shadow: 4px 4px 14px 1px rgba(8, 166, 228, 0.3137254902);
 }
 .cardPricing--big .cardPricing__columna {
-  margin-top: 40px;
+  margin-top: 4vw;
   margin-left: 10px;
 }
 
 .information {
-  width: 280px;
+  width: 80vw;
   margin: auto;
 }
 .information .information__title {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: 220%;
+  font-size: 9vw;
 }
 .information .information__description {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
-  font-size: 95%;
+  font-size: 3.8vw;
 }
 .information .information__contacto {
   margin-top: 15%;
 }
 .information .information__contacto .information__contacto__icon {
   margin-bottom: -2%;
+  width: 6vw;
+  height: 5vw;
 }
 .information .information__contacto .information__contacto__text {
   display: inline-block;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
-  font-size: 100%;
+  font-size: 4vw;
   color: #A5A5A5;
   margin-left: 5%;
 }
@@ -378,12 +391,13 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
   letter-spacing: 3.28px;
-  font-size: 60%;
+  font-size: 4vw;
 }
 .form .form__inpu {
   border: none;
   border-bottom: 1px solid #95989A;
-  width: 100%;
+  width: 80vw;
+  height: 6vw;
   margin-bottom: 10%;
 }
 .form .form__personalData .form__personalData_checkbox {
@@ -395,7 +409,7 @@ body {
   grid-template-columns: 1em auto;
   gap: 0.5em;
   float: left;
-  width: 9%;
+  width: 4vw;
 }
 .form .form__personalData .form__personalData_checkbox input {
   -webkit-appearance: none;
@@ -405,18 +419,18 @@ body {
   margin: 0;
   font: inherit;
   color: currentColor;
-  width: 25px;
-  height: 25px;
+  width: 5vw;
+  height: 5vw;
   border: 1px solid #95989A;
-  border-radius: 5px;
+  border-radius: 0.5vw;
   transform: translateY(-0.075em);
   display: grid;
   place-content: center;
 }
 .form .form__personalData .form__personalData_checkbox input::before {
   content: "";
-  width: 12px;
-  height: 12px;
+  width: 1.6vw;
+  height: 1.6vw;
   -webkit-clip-path: polygon(15% 64%, 0% 65%, 44% 100%, 100% 13%, 100% 0%, 45% 83%);
           clip-path: polygon(15% 64%, 0% 65%, 44% 100%, 100% 13%, 100% 0%, 45% 83%);
   transform: scale(0);
@@ -435,13 +449,13 @@ body {
 }
 .form .form__personalData .form__personalData__text {
   display: inline-block;
-  width: 86%;
+  width: 72vw;
   margin-left: 10px;
   position: relative;
   bottom: 5px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
-  font-size: 64%;
+  font-size: 2.8vw;
   color: #707070;
 }
 
@@ -460,18 +474,18 @@ body {
   padding-bottom: 8%;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
-  font-size: 0.6em;
+  font-size: 3vw;
 }
 
-.logo__footer {
+.logo--footer {
   padding-bottom: 0;
-  font-size: 1.7em;
+  font-size: 7vw;
   width: 100%;
 }
 
 .social {
-  width: 24px;
-  height: 24px;
+  width: 6vw;
+  height: 6vw;
   display: inline-block;
   position: relative;
   left: 10%;
