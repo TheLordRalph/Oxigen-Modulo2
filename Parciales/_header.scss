@@ -11,7 +11,7 @@
     }
     .header__menu {
         padding: 0% 0% 5% 5%;;
-        .header__menuEnlaces {
+        .header__menu__menuEnlaces {
             list-style: none;
             margin: 4% 0%;
             a {
@@ -20,9 +20,10 @@
                font-size: 3.5vw;
                font-family: $fontSecundaria;
                letter-spacing: 1vw;
+               font-weight: 700;
             }
         }
-        .header__menuEnlaces--black {
+        .header__menu__menuEnlaces--black {
             a {
               color: black;  
             }
@@ -47,4 +48,39 @@
 .social {
     width: 24px;
     height: 24px;
+}
+
+@media only screen and (min-width: 1000px) {
+    .header {
+        display: flex;
+        .header__menuLogo {
+            display: none;
+        }
+        .header__menu, .header__menu--displayNone {
+            display: flex;
+            width: 100%;
+            padding: 0;
+            justify-content: end;
+            .header__menu__menuEnlaces {
+                margin: 0 3%;
+                width: 8%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                a {
+                    font-size: 0.8vw;
+                    letter-spacing: 0.2vw;
+                }
+            }
+            .header__menu__menuEnlaces--black {
+                border-bottom: 4px solid $colorPrincipal;
+            }
+        }
+    }
+
+    .logo {
+        font-size: 2vw;
+        padding: 2%;
+        width: 22%;
+    }
 }
