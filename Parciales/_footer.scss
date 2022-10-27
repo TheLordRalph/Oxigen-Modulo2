@@ -30,3 +30,28 @@
     left: 10%;
     margin: 0 2%;
 }
+
+@media only screen and (min-width: 1000px) {
+    .footer {
+        margin-top: 5%;
+        display: flex;
+        .footer__logo {
+            width: 65%;
+            margin-left: 5%;
+            .footer__copyright {
+                font-size: 0.6vw;
+                padding-left: 2%;
+                padding-bottom: 2%;
+            }
+        }
+
+    }
+    .logo--footer {
+        font-size: 1.5vw;
+    }
+    .social {
+        width: 2vw;
+        height: 2vw;
+        margin: 2% 1% 0 1%;
+    }
+}

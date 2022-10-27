@@ -101,7 +101,7 @@ body {
   margin: 20% 0;
 }
 .cardOpenShop .cardOpenShop__titulo {
-  margin-bottom: 5%;
+  margin-bottom: 2%;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 8vw;
@@ -113,7 +113,9 @@ body {
   margin: 0% 18%;
 }
 .cardOpenShop .cardOpenShop__imagen {
-  width: 100%;
+  width: 195%;
+  position: relative;
+  right: 47%;
 }
 
 .botonDefault {
@@ -139,7 +141,7 @@ body {
   width: 35vw;
   position: relative;
   margin: auto;
-  bottom: 9vw;
+  bottom: 3vw;
 }
 
 .botonDefault--pink {
@@ -249,15 +251,15 @@ body {
 }
 .cardsDescription .cardsDescription__card {
   width: 80%;
-  margin: 5% auto;
+  margin: 2% auto;
   border: 1px solid #E8E9ED;
   background-color: white;
-  padding-top: 5%;
+  padding-top: 2%;
   border-radius: 4px;
 }
 .cardsDescription .cardsDescription__card .cardsDescription__card__imagen {
   width: 45vw;
-  margin: 0 5%;
+  margin: 0 2%;
   margin-left: 26%;
   position: relative;
   top: 10px;
@@ -277,18 +279,18 @@ body {
   top: 25px;
   left: 10px;
 }
-.cardsDescription .cardsDescription__card .cardsDescription__card__titulo {
+.cardsDescription .cardsDescription__card .cardsDescription__card__text .cardsDescription__card__text__titulo {
   width: 75%;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  margin: 10% 5%;
+  margin: 10% 2%;
   font-size: 6vw;
   line-height: 9vw;
 }
-.cardsDescription .cardsDescription__card .cardsDescription__card__descripccion {
+.cardsDescription .cardsDescription__card .cardsDescription__card__text .cardsDescription__card__text__descripccion {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
-  margin: 10% 5%;
+  margin: 10% 2%;
   font-size: 3vw;
   line-height: 5vw;
 }
@@ -298,7 +300,7 @@ body {
   margin: 10% 0;
 }
 .pricing .pricing__title {
-  margin-bottom: 5%;
+  margin-bottom: 2%;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 9vw;
@@ -311,6 +313,7 @@ body {
   padding: 0% 2%;
   border: 1px solid #08A6E4;
   border-radius: 10%;
+  margin-bottom: 15%;
 }
 .cardPricing .cardPricing__columna {
   height: 55vw;
@@ -414,7 +417,7 @@ body {
   font-weight: 600;
   font-size: 4vw;
   color: #A5A5A5;
-  margin-left: 5%;
+  margin-left: 2%;
 }
 
 .form {
@@ -434,7 +437,7 @@ body {
   height: 6vw;
   margin-bottom: 10%;
 }
-.form .form__personalData .form__personalData_checkbox {
+.form .form__personalData .form__personalData__checkbox {
   font-family: system-ui, sans-serif;
   font-size: 2rem;
   font-weight: bold;
@@ -445,7 +448,7 @@ body {
   float: left;
   width: 4vw;
 }
-.form .form__personalData .form__personalData_checkbox input {
+.form .form__personalData .form__personalData__checkbox input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -461,7 +464,7 @@ body {
   display: grid;
   place-content: center;
 }
-.form .form__personalData .form__personalData_checkbox input::before {
+.form .form__personalData .form__personalData__checkbox input::before {
   content: "";
   width: 1.6vw;
   height: 1.6vw;
@@ -473,10 +476,10 @@ body {
   box-shadow: inset 1em 1em var(--form-control-color);
   background-color: CanvasText;
 }
-.form .form__personalData .form__personalData_checkbox input:checked::before {
+.form .form__personalData .form__personalData__checkbox input:checked::before {
   transform: scale(1);
 }
-.form .form__personalData .form__personalData_checkbox input:disabled {
+.form .form__personalData .form__personalData__checkbox input:disabled {
   --form-control-color: var(--form-control-disabled);
   color: var(--form-control-disabled);
   cursor: not-allowed;
@@ -493,6 +496,314 @@ body {
   color: #707070;
 }
 
+@media only screen and (min-width: 1000px) {
+  .cardOpenShop {
+    margin: 10% 0 2% 0;
+  }
+  .cardOpenShop .cardOpenShop__titulo {
+    font-size: 3vw;
+    margin-bottom: 0%;
+  }
+  .cardOpenShop .cardOpenShop__descripcion {
+    font-size: 1vw;
+    margin: 2% auto;
+    height: 2vw;
+  }
+  .cardOpenShop .cardOpenShop__imagen {
+    width: 100%;
+    position: static;
+  }
+  .botonDefault {
+    width: 30%;
+    height: 6vw;
+    margin: 1% auto;
+  }
+  .botonDefault span {
+    font-size: 1.5vw;
+    padding-top: 2vw;
+  }
+  .botonDefault--small {
+    bottom: -1.5vw;
+    width: 12vw;
+    height: 3vw;
+  }
+  .botonDefault--small span {
+    padding-top: 1vw;
+    font-size: 0.9vw;
+  }
+  .botonDefault--right {
+    height: 4vw;
+    width: 13vw;
+    margin: 5% 0 0 auto;
+  }
+  .botonDefault--right span {
+    padding-top: 1.5vw;
+    font-size: 0.8vw;
+  }
+  .cardPlataformData {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cardPlataformData .cardPlataformData__titulo {
+    font-size: 2vw;
+    font-weight: 400;
+    width: 100%;
+  }
+  .cardPlataformData .cardPlataformData__dato {
+    width: 20%;
+    margin: 10% auto 10% auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cardPlataformData .cardPlataformData__dato .cardPlataformData__dato__miniLogo {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    padding-left: 3vw;
+  }
+  .cardPlataformData .cardPlataformData__dato .cardPlataformData__dato__miniLogo .cardPlataformData__dato__miniLogo__imagen {
+    width: 5vw;
+    left: 3.5vw;
+  }
+  .cardPlataformData .cardPlataformData__dato .cardPlataformData__dato__miniLogo .cardPlataformData__dato__miniLogo__imagen--eye {
+    width: 7vw;
+    top: 1.5vw;
+    left: 2vw;
+  }
+  .cardPlataformData .cardPlataformData__dato .cardPlataformData__dato__miniLogo .cardPlataformData__dato__miniLogo__imagen--catalog {
+    width: 4.5vw;
+    left: 4.5vw;
+    top: 1vw;
+  }
+  .cardPlataformData .cardPlataformData__dato .cardPlataformData__dato__numero {
+    width: 100%;
+    position: static;
+    letter-spacing: 0.37vw;
+    font-size: 1.3vw;
+  }
+  .cardPlataformData .cardPlataformData__dato .cardPlataformData__dato__descripcion {
+    width: 75%;
+    position: static;
+    font-size: 1.1vw;
+    padding-right: 1vw;
+    margin-top: 1vw;
+  }
+  .backgroundCircle {
+    width: 7vw;
+    height: 7vw;
+  }
+  .backgroundCircle--pink--radius {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 20%;
+    margin-top: 5%;
+    left: 73%;
+    z-index: 0;
+  }
+  .backgroundCircle--big {
+    width: 20vw;
+    height: 20vw;
+    left: 15%;
+  }
+  .cardsDescription .cardsDescription__card {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 0;
+  }
+  .cardsDescription .cardsDescription__card .cardsDescription__card__text .cardsDescription__card__text__titulo {
+    width: 80%;
+    margin: 10% 0 5% 5%;
+    font-size: 2.3vw;
+    line-height: 2.63vw;
+  }
+  .cardsDescription .cardsDescription__card .cardsDescription__card__text .cardsDescription__card__text__descripccion {
+    width: 55%;
+    margin: 2% 5%;
+    font-size: 1vw;
+    line-height: 1.4vw;
+  }
+  .cardsDescription .cardsDescription__card .cardsDescription__card__imagen {
+    height: 13vw;
+    position: static;
+    width: auto;
+    margin: 8% 10% 0% 0%;
+    z-index: 1;
+  }
+  .cardsDescription .cardsDescription__card--bigscreen {
+    flex-direction: initial;
+  }
+  .cardsDescription .cardsDescription__card--bigscreen .cardsDescription__card__text .cardsDescription__card__text__titulo {
+    width: 70%;
+    margin: 16% 0 5% 5%;
+  }
+  .cardsDescription .cardsDescription__card--bigscreen .cardsDescription__card__text .cardsDescription__card__text__descripccion {
+    width: 87%;
+  }
+  .cardsDescription .cardsDescription__card--bigscreen .cardsDescription__card__imagen--mobile {
+    height: 20vw;
+    margin: 3% 25% 1% 5%;
+  }
+  .cardsDescription .cardsDescription__card--separateBlock {
+    flex-direction: initial;
+    border: 1px solid #F7F7F7;
+  }
+  .cardsDescription .cardsDescription__card--separateBlock .cardsDescription__card__text {
+    border-right: 70px solid #F7F7F7;
+    width: 170%;
+  }
+  .cardsDescription .cardsDescription__card--separateBlock .cardsDescription__card__text .cardsDescription__card__text__titulo {
+    width: 50%;
+  }
+  .cardsDescription .cardsDescription__card--separateBlock .cardsDescription__card__text .cardsDescription__card__text__descripccion {
+    width: 56%;
+  }
+  .cardsDescription .cardsDescription__card--separateBlock .cardsDescription__card__imagen--trompet {
+    margin: 25% 0% 0% 10%;
+  }
+  .line {
+    width: 70%;
+    margin: 10% 0 8% 5%;
+    height: 5px;
+    background: #08A6E4;
+  }
+  .line--pink {
+    width: 45%;
+    margin: 6% 0 8% 5%;
+    background-color: #FB3B64;
+  }
+  .line--green {
+    margin: 5% 10% 10% 5%;
+    width: 45%;
+    background-color: #55DFB4;
+  }
+  .pricing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .pricing .pricing__title {
+    width: 100%;
+    font-size: 4vw;
+  }
+  .pricing .cardPricing {
+    height: auto;
+    width: 25vw;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .pricing .cardPricing .cardPricing__columna {
+    width: 100%;
+    position: static;
+    height: 25%;
+    margin-left: 0;
+  }
+  .pricing .cardPricing .cardPricing__columna .cardPricing__columna__name {
+    margin-top: 1vw;
+    width: 100%;
+    font-size: 2vw;
+  }
+  .pricing .cardPricing .cardPricing__columna .cardPricing__columna__price {
+    width: 100%;
+    font-size: 4vw;
+  }
+  .pricing .cardPricing .cardPricing__columna .cardPricing__columna__description {
+    width: 100%;
+    font-size: 0.8vw;
+  }
+  .pricing .cardPricing .cardPricing__columna--bigRigth {
+    position: static;
+    margin: 15% 0 0% 0;
+    height: 71%;
+  }
+  .pricing .cardPricing .cardPricing__columna--bigRigth .cardPricing__columna__ventajaDesventaja {
+    margin: 5% 0;
+    justify-content: center;
+  }
+  .pricing .cardPricing .cardPricing__columna--bigRigth .cardPricing__columna__ventajaDesventaja .cardPricing__columna__ventajaDesventaja__img {
+    width: 5%;
+  }
+  .pricing .cardPricing .cardPricing__columna--bigRigth .cardPricing__columna__ventajaDesventaja .cardPricing__columna__ventajaDesventaja__titulo {
+    font-size: 1vw;
+    width: auto;
+    margin-left: 5%;
+    text-align: center;
+  }
+  .pricing .cardPricing--big {
+    width: 30vw;
+    height: 40vw;
+    padding: 0 2%;
+  }
+  .pricing .cardPricing--big .cardPricing__columna--bigRigth {
+    height: 47%;
+  }
+  .information {
+    display: flex;
+    width: 65%;
+    height: 25vw;
+  }
+  .information .information__infoContacto {
+    display: flex;
+    flex-wrap: wrap;
+    height: 10vw;
+    width: 50%;
+  }
+  .information .information__infoContacto .information__title {
+    width: 100%;
+    font-size: 2.8vw;
+  }
+  .information .information__infoContacto .information__description {
+    width: 100%;
+    font-size: 1vw;
+  }
+  .information .information__infoContacto .information__contacto {
+    display: flex;
+    width: 30%;
+    margin-top: 5%;
+    margin-right: 5%;
+  }
+  .information .information__infoContacto .information__contacto .information__contacto__icon {
+    width: 1.3vw;
+    height: 1vw;
+  }
+  .information .information__infoContacto .information__contacto .information__contacto__text {
+    width: 73%;
+    font-size: 1vw;
+  }
+  .information .form {
+    width: 50%;
+    margin: 0;
+  }
+  .information .form .form__title {
+    font-size: 0.64vw;
+  }
+  .information .form .form__inpu {
+    width: 100%;
+    height: 3vw;
+  }
+  .information .form .form__personalData {
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .information .form .form__personalData .form__personalData__checkbox {
+    width: 2vw;
+  }
+  .information .form .form__personalData .form__personalData__checkbox input {
+    width: 1.5vw;
+    height: 1.5vw;
+  }
+  .information .form .form__personalData .form__personalData__checkbox input::before {
+    width: 0.5vw;
+    height: 0.5vw;
+  }
+  .information .form .form__personalData .form__personalData__text {
+    width: 89%;
+    font-size: 0.7vw;
+  }
+}
 .footer {
   margin-top: 15%;
   box-shadow: 0 0 10px 10px lightgray;
@@ -524,4 +835,28 @@ body {
   position: relative;
   left: 10%;
   margin: 0 2%;
+}
+
+@media only screen and (min-width: 1000px) {
+  .footer {
+    margin-top: 5%;
+    display: flex;
+  }
+  .footer .footer__logo {
+    width: 65%;
+    margin-left: 5%;
+  }
+  .footer .footer__logo .footer__copyright {
+    font-size: 0.6vw;
+    padding-left: 2%;
+    padding-bottom: 2%;
+  }
+  .logo--footer {
+    font-size: 1.5vw;
+  }
+  .social {
+    width: 2vw;
+    height: 2vw;
+    margin: 2% 1% 0 1%;
+  }
 }/*# sourceMappingURL=styles.css.map */
