@@ -30,3 +30,24 @@ const percentageScroller = () => {
 
 window.addEventListener('scroll', percentageScroller);
 
+
+
+const scrollTop = () => {
+    let intervalScroll = setInterval(function() {
+        window.scrollTo(0, window.scrollY - 10);
+        console.log(window.scrollY);
+
+        if (window.scrollY <= 0) {
+            clearInterval(intervalScroll);
+        return;
+        } 
+    }, 5);
+}
+
+
+document
+    .querySelector('#returnTop')
+    .addEventListener('click', () => {
+        window.setTimeout(scrollTop, 200)
+    });
+
