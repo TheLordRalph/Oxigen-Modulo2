@@ -14,9 +14,11 @@
         margin: 0% 18%;
     }
     .cardOpenShop__imagen {
-        width: 195%;
-        position: relative;
-        right: 47%;
+        width: 100%;
+        display: block;
+    }
+    .cardOpenShop__imagen--big {
+        display: none;
     }
 }
 
@@ -416,6 +418,10 @@
         .cardOpenShop__imagen {
             width: 100%;
             position: static;
+            display: block;
+        }
+        .cardOpenShop__imagen--small {
+            display: none;
         }
     }
 
