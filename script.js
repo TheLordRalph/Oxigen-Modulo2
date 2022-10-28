@@ -19,3 +19,14 @@ document
             document.getElementById('munuBurger').setAttribute('class', '');
         }
     });
+
+
+
+// Functionality to percentage scroller
+const percentageScroller = () => {
+    let scrollPercent = Math.round((document.documentElement.scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight))*100);
+    document.getElementById('percentageScroller').setAttribute('style', 'width: ' + scrollPercent + '%')
+}
+
+window.addEventListener('scroll', percentageScroller);
+

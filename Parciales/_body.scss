@@ -7,3 +7,15 @@
 body {
     min-width: 320px;
 }
+
+.displaNone {
+    display: none;
+}
+
+#percentageScroller {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    height: 0.5vw;
+    background-color: $colorPrincipal;
+}

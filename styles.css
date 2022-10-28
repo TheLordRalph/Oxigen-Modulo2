@@ -14,6 +14,19 @@ body {
   min-width: 320px;
 }
 
+.displaNone {
+  display: none;
+}
+
+#percentageScroller {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  height: 0.5vw;
+  background-color: #08A6E4;
+}
+
 .header {
   padding: 0% 6% 0% 6%;
   box-shadow: 0px 5px 5px lightgray;
@@ -113,9 +126,11 @@ body {
   margin: 0% 18%;
 }
 .cardOpenShop .cardOpenShop__imagen {
-  width: 195%;
-  position: relative;
-  right: 47%;
+  width: 100%;
+  display: block;
+}
+.cardOpenShop .cardOpenShop__imagen--big {
+  display: none;
 }
 
 .botonDefault {
@@ -512,6 +527,10 @@ body {
   .cardOpenShop .cardOpenShop__imagen {
     width: 100%;
     position: static;
+    display: block;
+  }
+  .cardOpenShop .cardOpenShop__imagen--small {
+    display: none;
   }
   .botonDefault {
     width: 30%;
