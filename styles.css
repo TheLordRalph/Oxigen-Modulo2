@@ -44,7 +44,7 @@ body {
 .header .header__menu .header__menu__menuEnlaces--black a {
   color: black;
 }
-.header .header__menu--displayNone {
+.header .displayNone {
   display: none;
 }
 
@@ -70,24 +70,24 @@ body {
   .header .header__menuLogo {
     display: none;
   }
-  .header .header__menu, .header .header__menu--displayNone {
+  .header .header__menu, .header .displayNone {
     display: flex;
     width: 100%;
     padding: 0;
     justify-content: end;
   }
-  .header .header__menu .header__menu__menuEnlaces, .header .header__menu--displayNone .header__menu__menuEnlaces {
+  .header .header__menu .header__menu__menuEnlaces, .header .displayNone .header__menu__menuEnlaces {
     margin: 0 3%;
     width: 8%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .header .header__menu .header__menu__menuEnlaces a, .header .header__menu--displayNone .header__menu__menuEnlaces a {
+  .header .header__menu .header__menu__menuEnlaces a, .header .displayNone .header__menu__menuEnlaces a {
     font-size: 0.8vw;
     letter-spacing: 0.2vw;
   }
-  .header .header__menu .header__menu__menuEnlaces--black, .header .header__menu--displayNone .header__menu__menuEnlaces--black {
+  .header .header__menu .header__menu__menuEnlaces--black, .header .displayNone .header__menu__menuEnlaces--black {
     border-bottom: 4px solid #08A6E4;
   }
   .logo {
