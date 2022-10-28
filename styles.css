@@ -466,8 +466,8 @@ body {
 }
 .form .form__personalData .form__personalData__checkbox input::before {
   content: "";
-  width: 1.6vw;
-  height: 1.6vw;
+  width: 2.6vw;
+  height: 2.6vw;
   -webkit-clip-path: polygon(15% 64%, 0% 65%, 44% 100%, 100% 13%, 100% 0%, 45% 83%);
           clip-path: polygon(15% 64%, 0% 65%, 44% 100%, 100% 13%, 100% 0%, 45% 83%);
   transform: scale(0);
@@ -783,6 +783,7 @@ body {
   .information .form .form__inpu {
     width: 100%;
     height: 3vw;
+    font-size: 1.5vw;
   }
   .information .form .form__personalData {
     flex-wrap: nowrap;
@@ -796,8 +797,8 @@ body {
     height: 1.5vw;
   }
   .information .form .form__personalData .form__personalData__checkbox input::before {
-    width: 0.5vw;
-    height: 0.5vw;
+    width: 0.8vw;
+    height: 0.8vw;
   }
   .information .form .form__personalData .form__personalData__text {
     width: 89%;
