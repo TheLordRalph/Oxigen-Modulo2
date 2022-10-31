@@ -1,6 +1,11 @@
 const CLASS_MENU = "header__menu ";
 const DISPLAY_NONE = "displayNone";
 
+const CLASS_FORM = "form__input";
+const CLASS_FORM_CHECKBOX = "form__personalData__checkbox__input";
+
+const MAIL_FORMAT = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
 
 // Functionality to desplagate menu in the header in the mobile version.
 document
@@ -32,6 +37,8 @@ window.addEventListener('scroll', percentageScroller);
 
 
 
+// Funcionality Scroll to the top page.
+
 const scrollTop = () => {
     let intervalScroll = setInterval(function() {
         window.scrollTo(0, window.scrollY - 10);
@@ -51,3 +58,33 @@ document
         window.setTimeout(scrollTop, 200)
     });
 
+
+
+// Funcionality to validation form.
+document
+    .querySelector('#formBtn')
+    .addEventListener('click', () => {
+        let formName = document.getElementById('formName');
+        let formEmail = document.getElementById('formEmail');
+        let formCheck = document.getElementById('formCheck');
+        if (!(formName.value.length >= 2 && formName.value.length <= 100)) {
+            formName.setAttribute("class", CLASS_FORM + " " + CLASS_FORM + "--red");
+            return;
+        } else {
+            formName.setAttribute("class", CLASS_FORM);
+        }
+
+        if (!formEmail.value.match(MAIL_FORMAT)) {
+            formEmail.setAttribute("class", CLASS_FORM + " " + CLASS_FORM + "--red");
+            return;
+        } else {
+            formEmail.setAttribute("class", CLASS_FORM);
+        }
+
+        if (!formCheck.checked) {
+            formCheck.setAttribute("class", CLASS_FORM_CHECKBOX + " " + CLASS_FORM_CHECKBOX + "--red");
+            return; 
+        } else {
+            formCheck.setAttribute("class", CLASS_FORM_CHECKBOX);
+        }
+    });

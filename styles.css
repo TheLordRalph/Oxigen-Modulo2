@@ -462,12 +462,15 @@ body {
   letter-spacing: 3.28px;
   font-size: 4vw;
 }
-.form .form__inpu {
+.form .form__input {
   border: none;
   border-bottom: 1px solid #95989A;
   width: 80vw;
   height: 6vw;
   margin-bottom: 10%;
+}
+.form .form__input--red {
+  border-color: red;
 }
 .form .form__personalData .form__personalData__checkbox {
   font-family: system-ui, sans-serif;
@@ -480,7 +483,7 @@ body {
   float: left;
   width: 4vw;
 }
-.form .form__personalData .form__personalData__checkbox input {
+.form .form__personalData .form__personalData__checkbox .form__personalData__checkbox__input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -496,7 +499,10 @@ body {
   display: grid;
   place-content: center;
 }
-.form .form__personalData .form__personalData__checkbox input::before {
+.form .form__personalData .form__personalData__checkbox .form__personalData__checkbox__input--red {
+  border-color: red;
+}
+.form .form__personalData .form__personalData__checkbox .form__personalData__checkbox__input::before {
   content: "";
   width: 2.6vw;
   height: 2.6vw;
@@ -508,10 +514,10 @@ body {
   box-shadow: inset 1em 1em var(--form-control-color);
   background-color: CanvasText;
 }
-.form .form__personalData .form__personalData__checkbox input:checked::before {
+.form .form__personalData .form__personalData__checkbox .form__personalData__checkbox__input:checked::before {
   transform: scale(1);
 }
-.form .form__personalData .form__personalData__checkbox input:disabled {
+.form .form__personalData .form__personalData__checkbox .form__personalData__checkbox__input:disabled {
   --form-control-color: var(--form-control-disabled);
   color: var(--form-control-disabled);
   cursor: not-allowed;
@@ -553,6 +559,7 @@ body {
     width: 30%;
     height: 6vw;
     margin: 1% auto;
+    cursor: pointer;
   }
   .botonDefault span {
     font-size: 1.5vw;
@@ -816,7 +823,7 @@ body {
   .information .form .form__title {
     font-size: 0.64vw;
   }
-  .information .form .form__inpu {
+  .information .form .form__input {
     width: 100%;
     height: 3vw;
     font-size: 1.5vw;
@@ -828,16 +835,16 @@ body {
   .information .form .form__personalData .form__personalData__checkbox {
     width: 2vw;
   }
-  .information .form .form__personalData .form__personalData__checkbox input {
+  .information .form .form__personalData .form__personalData__checkbox .form__personalData__checkbox__input {
     width: 1.5vw;
     height: 1.5vw;
   }
-  .information .form .form__personalData .form__personalData__checkbox input::before {
+  .information .form .form__personalData .form__personalData__checkbox .form__personalData__checkbox__input::before {
     width: 0.8vw;
     height: 0.8vw;
   }
   .information .form .form__personalData .form__personalData__text {
-    width: 89%;
+    width: 85%;
     font-size: 0.7vw;
   }
 }
