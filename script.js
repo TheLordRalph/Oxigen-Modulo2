@@ -4,6 +4,11 @@ const DISPLAY_NONE = "displayNone";
 const CLASS_FORM = "form__input";
 const CLASS_FORM_CHECKBOX = "form__personalData__checkbox__input";
 
+const CLASS_NEWSLETTER = "newsletter"
+const CLASS_NEWSLETTER_INPUT = "newsletter__input"
+
+const NEWS_LETTER_ACTIVE = 'NewsLetter_active';
+
 const MAIL_FORMAT = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 
@@ -30,7 +35,14 @@ document
 // Functionality to percentage scroller
 const percentageScroller = () => {
     let scrollPercent = Math.round((document.documentElement.scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight))*100);
-    document.getElementById('percentageScroller').setAttribute('style', 'width: ' + scrollPercent + '%')
+    document.getElementById('percentageScroller').setAttribute('style', 'width: ' + scrollPercent + '%');
+    
+    // A part to the functionality for de popUp 'News Letter'
+    if (scrollPercent >= 25) {
+        if (localStorage.getItem(NEWS_LETTER_ACTIVE) != "false" || sessionStorage.getItem(NEWS_LETTER_ACTIVE) != "false") {
+            newsletter();
+        }
+    }
 }
 
 window.addEventListener('scroll', percentageScroller);
@@ -108,3 +120,54 @@ document
 
         sendForm(formName.value, formEmail.value);
     });
+
+
+
+// Functionality for the popUp.
+    
+const newsletter = () => {
+    document.getElementById('popUp').setAttribute('class', CLASS_NEWSLETTER);
+}
+
+window.setTimeout(() => {
+    if (localStorage.getItem(NEWS_LETTER_ACTIVE) != "false" || sessionStorage.getItem(NEWS_LETTER_ACTIVE) != "false") {
+        newsletter();
+    }
+}, 5000)
+
+
+const closePopUp = () => {
+    document.getElementById('popUp').setAttribute('class', CLASS_NEWSLETTER + ' ' + DISPLAY_NONE);
+    localStorage.setItem(NEWS_LETTER_ACTIVE, false);
+    sessionStorage.setItem(NEWS_LETTER_ACTIVE, false);
+}
+
+
+document
+    .querySelector('#newsletterCross')
+    .addEventListener('click', () => {
+        closePopUp();
+    })
+
+document
+    .querySelector('#popUp')
+    .addEventListener('click', (element) => {
+        console.log(element.target);
+        if (element.target.id == "popUp") {
+            closePopUp();
+        }
+    })
+
+document
+    .querySelector('#newsletterBtn')
+    .addEventListener('click', () => {
+        let newsletterEmail = document.getElementById('newsletterEmail');
+        if (!newsletterEmail.value.match(MAIL_FORMAT)) {
+            newsletterEmail.setAttribute("class", CLASS_NEWSLETTER_INPUT + " " + CLASS_NEWSLETTER_INPUT + "--red");
+            return;
+        } else {
+            newsletterEmail.setAttribute("class", CLASS_NEWSLETTER_INPUT);
+            closePopUp();
+            sendForm('News Letter', newsletterEmail.value);
+        }
+    })
