@@ -60,6 +60,24 @@ document
 
 
 
+// Funcionality, 'Post' the name and email.
+const sendForm = async (name, email) => {
+
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        body: JSON.stringify({
+          title: name,
+          body: email,
+        }),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+}
+
+
 // Funcionality to validation form.
 document
     .querySelector('#formBtn')
@@ -87,4 +105,6 @@ document
         } else {
             formCheck.setAttribute("class", CLASS_FORM_CHECKBOX);
         }
+
+        sendForm(formName.value, formEmail.value);
     });
