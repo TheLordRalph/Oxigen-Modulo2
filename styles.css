@@ -505,6 +505,42 @@ body {
   margin-left: 10px;
 }
 
+.slider {
+  margin: 20% 0;
+  height: 56vw;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+.slider .slider__img {
+  width: 100%;
+  height: 70%;
+}
+.slider .slider__arrow {
+  width: 7%;
+  position: absolute;
+  top: 283vw;
+  color: white;
+  left: 15%;
+}
+.slider .slider__arrow--right {
+  left: 78%;
+}
+.slider .slider__circles {
+  position: absolute;
+  top: 302vw;
+  left: 35vw;
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+.slider .slider__circles .slider__circles__circle {
+  width: 2vw;
+  background-color: white;
+  height: 2vw;
+  border-radius: 100%;
+}
+
 .information {
   width: 80vw;
   margin: auto;

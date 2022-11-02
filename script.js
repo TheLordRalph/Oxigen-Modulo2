@@ -14,6 +14,19 @@ const MAIL_FORMAT = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z
 let actualCurrency = "usd";
 const currenciesSymbols = {usd: "$", eur: "€", gbp: "£"};
 
+const CLASS_SLIDER_IMG = "slider__img";
+
+
+class Slider {
+    constructor(elementoPrincipal) {
+        this.elementoPrincipal = elementoPrincipal;
+    }
+}
+
+let slider = new Slider("slider1");
+let idNumSlider = 1;
+const idSlider = "slider";
+
 
 // Functionality to desplagate menu in the header in the mobile version.
 document
@@ -197,3 +210,20 @@ document
     .addEventListener('change', (element) => {
         currencies(element.target.value);
     })
+
+
+window.setInterval(() => {
+    animSlider();
+}, 5000);
+
+const animSlider = () => {
+    let imagenActual = document.getElementById(slider.elementoPrincipal);
+    imagenActual.setAttribute('class', CLASS_SLIDER_IMG + " " + DISPLAY_NONE);
+    
+    idNumSlider++;
+    if (idNumSlider > 8) {
+        idNumSlider = 1
+    }
+    slider.elementoPrincipal = idSlider + idNumSlider;
+    document.getElementById(slider.elementoPrincipal).setAttribute('class', CLASS_SLIDER_IMG);
+}
