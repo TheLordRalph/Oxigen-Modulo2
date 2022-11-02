@@ -7,7 +7,7 @@
         display: inline-block;
         position: relative;
         top: 0.4em;
-        margin-left: 10%;
+        margin-left: 7%;
     }
     .header__menu {
         padding: 0% 0% 5% 5%;;
@@ -37,12 +37,28 @@
 
 .logo {
     font-size: 7vw;
-    padding: 8%;
-    width: 75%;
+    padding: 8% 0;
+    width: 60%;
     color: $colorPrincipal;
     display: inline-block;
     font-family: $fontPrincipal;
     font-weight: 300;
+}
+
+.moneda {
+    font-size: 4.2vw;
+    font-family: $fontSecundaria;
+    font-weight: 400;
+    color: black;
+    background: none;
+    border: none;
+    border-bottom: 4px solid $colorPrincipal;
+    margin: 0 0%;
+    width: 20%;
+    padding: 8% 0;
+    .moneda__option {
+        font-size: 2.7vw;
+    }
 }
 
 .social {
@@ -53,17 +69,18 @@
 @media only screen and (min-width: 1000px) {
     .header {
         display: flex;
+        justify-content: space-between;
         .header__menuLogo {
             display: none;
         }
         .header__menu, .displayNone {
             display: flex;
-            width: 100%;
+            width: 50%;
             padding: 0;
             justify-content: end;
             .header__menu__menuEnlaces {
                 margin: 0 3%;
-                width: 8%;
+                width: 15%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -82,5 +99,14 @@
         font-size: 2vw;
         padding: 2%;
         width: 22%;
+    }
+
+    .moneda {
+        font-size: 1.2vw;
+        width: 5%;
+        padding: 0;
+        .moneda__option {
+            font-size: 0.7vw;
+        }
     }
 }

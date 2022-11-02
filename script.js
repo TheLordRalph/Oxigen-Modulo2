@@ -11,6 +11,9 @@ const NEWS_LETTER_ACTIVE = 'NewsLetter_active';
 
 const MAIL_FORMAT = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
+let actualCurrency = "usd";
+const currenciesSymbols = {usd: "$", eur: "€", gbp: "£"};
+
 
 // Functionality to desplagate menu in the header in the mobile version.
 document
@@ -152,7 +155,6 @@ document
 document
     .querySelector('#popUp')
     .addEventListener('click', (element) => {
-        console.log(element.target);
         if (element.target.id == "popUp") {
             closePopUp();
         }
@@ -170,4 +172,28 @@ document
             closePopUp();
             sendForm('News Letter', newsletterEmail.value);
         }
+    })
+
+// Functionality to change currency.
+
+const changePrices = (priceCurrency) => {
+    let prices = document.querySelectorAll('.cardPricing__columna__price');
+    prices.forEach(e => {
+        e.innerHTML = currenciesSymbols[actualCurrency] + parseFloat(e.innerHTML.substring(1) * priceCurrency).toFixed(0);
+    });
+}
+
+const currencies = (currency) => {
+    fetch("https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/" + actualCurrency + "/" + currency + ".json")
+      .then(response => response.json())
+      .then(data => {
+        actualCurrency = currency;
+        changePrices(data[currency]);
+      })
+}
+
+document
+    .querySelector('#moneda')
+    .addEventListener('change', (element) => {
+        currencies(element.target.value);
     })
