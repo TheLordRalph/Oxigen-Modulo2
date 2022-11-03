@@ -15,17 +15,7 @@ let actualCurrency = "usd";
 const currenciesSymbols = {usd: "$", eur: "€", gbp: "£"};
 
 const CLASS_SLIDER_IMG = "slider__img";
-
-
-class Slider {
-    constructor(elementoPrincipal) {
-        this.elementoPrincipal = elementoPrincipal;
-    }
-}
-
-let slider = new Slider("slider1");
-let idNumSlider = 1;
-const idSlider = "slider";
+const CLASS_SLIDER_CIRCLES = "slider__circles__circle";
 
 
 // Functionality to desplagate menu in the header in the mobile version.
@@ -212,18 +202,69 @@ document
     })
 
 
-window.setInterval(() => {
-    animSlider();
-}, 5000);
 
-const animSlider = () => {
+// Funcionality Slider
+
+class Slider {
+    constructor(elementoPrincipal) {
+        this.elementoPrincipal = elementoPrincipal;
+    }
+}
+
+const ID_SLIDER = "slider";
+let slider = new Slider("slider1");
+let idNumSlider = 1;
+let circleSlider = document.getElementsByClassName('slider__circles__circle');
+let imagenesSlider = document.getElementsByClassName("slider__img");
+
+
+const animSlider = (prevNext) => {
     let imagenActual = document.getElementById(slider.elementoPrincipal);
     imagenActual.setAttribute('class', CLASS_SLIDER_IMG + " " + DISPLAY_NONE);
-    
-    idNumSlider++;
+    idNumSlider += prevNext;
+
     if (idNumSlider > 8) {
         idNumSlider = 1
-    }
-    slider.elementoPrincipal = idSlider + idNumSlider;
+    } else if (idNumSlider < 1) {
+        idNumSlider = 8
+    }    
+    slider.elementoPrincipal = ID_SLIDER + idNumSlider;
     document.getElementById(slider.elementoPrincipal).setAttribute('class', CLASS_SLIDER_IMG);
+
+    let circleSelect = document.getElementsByClassName(CLASS_SLIDER_CIRCLES + "--big")[0];
+    circleSelect.setAttribute('class', CLASS_SLIDER_CIRCLES);
+    circleSlider[idNumSlider-1].setAttribute('class', CLASS_SLIDER_CIRCLES + " " + CLASS_SLIDER_CIRCLES + "--big");
+};
+
+window.setInterval(() => {
+    animSlider(1);
+}, 7000);
+
+document
+    .querySelector('#sliderArrowLeft')
+    .addEventListener('click', () => {
+        animSlider(-1);
+    })
+
+document
+    .querySelector('#sliderArrowRigth')
+    .addEventListener('click', () => {
+        animSlider(1);
+    })
+
+
+for (let i = 0; i < circleSlider.length; i++) {
+    circleSlider[i].addEventListener("click", (e) => {
+        let imagenActual = document.getElementById(slider.elementoPrincipal);
+
+        imagenActual.setAttribute('class', CLASS_SLIDER_IMG + " " + DISPLAY_NONE);
+        imagenesSlider[i].setAttribute('class', CLASS_SLIDER_IMG);
+
+        let circleSelect = document.getElementsByClassName(CLASS_SLIDER_CIRCLES + "--big")[0];
+        circleSelect.setAttribute('class', CLASS_SLIDER_CIRCLES);
+        e.target.setAttribute('class', CLASS_SLIDER_CIRCLES + " " + CLASS_SLIDER_CIRCLES + "--big")
+
+        slider.elementoPrincipal = imagenesSlider[i].id;
+        idNumSlider = i + 1
+    });
 }
