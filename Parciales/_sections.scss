@@ -306,18 +306,19 @@
     }
     .slider__arrow {
         width: 7%;
-        position: absolute;
-        top: 283vw;
+        position: relative;
+        top: 26vw;
         color: white;
-        left: 15%;
+        right: 40%;
+        cursor: pointer;
     }
     .slider__arrow--right {
-        left: 78%;
+        left: 40%;
     }
     .slider__circles {
-        position: absolute;
-        top: 302vw;
-        left: 35vw;
+        position: relative;
+        top: 65%;
+        left: 35%;
         display: flex;
         justify-content: space-between;
         width: 30%;
@@ -328,6 +329,7 @@
             height: 2vw;
             border-radius: 100%;
             opacity: 70%;
+            cursor: pointer;
         }
         .slider__circles__circle--big {
             width: 2.5vw;
