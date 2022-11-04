@@ -209,7 +209,29 @@ class Slider {
     constructor(elementoPrincipal) {
         this.elementoPrincipal = elementoPrincipal;
     }
+
+    changeSlider(a) {
+        let imagenActual = document.getElementById(this.elementoPrincipal);
+        imagenActual.setAttribute('class', CLASS_SLIDER_IMG + " " + DISPLAY_NONE);
+
+        idNumSlider += a;
+
+        if (idNumSlider > 8) {
+            idNumSlider = 1
+        } else if (idNumSlider < 1) {
+            idNumSlider = 8
+        }
+
+        this.elementoPrincipal = ID_SLIDER + idNumSlider;
+        document.getElementById(this.elementoPrincipal).setAttribute('class', CLASS_SLIDER_IMG);
+
+        document.getElementsByClassName(CLASS_SLIDER_CIRCLES + "--big")[0]
+            .setAttribute('class', CLASS_SLIDER_CIRCLES);
+
+        circleSlider[idNumSlider-1].setAttribute('class', CLASS_SLIDER_CIRCLES + " " + CLASS_SLIDER_CIRCLES + "--big");
+    }
 }
+
 
 const ID_SLIDER = "slider";
 let slider = new Slider("slider1");
@@ -217,54 +239,35 @@ let idNumSlider = 1;
 let circleSlider = document.getElementsByClassName('slider__circles__circle');
 let imagenesSlider = document.getElementsByClassName("slider__img");
 
+function intervalSliderFunction() {
+    intervalSlider = setInterval(() => {
+        slider.changeSlider(1)
+    }, 5000);   
+}
+intervalSliderFunction()
 
-const animSlider = (prevNext) => {
-    let imagenActual = document.getElementById(slider.elementoPrincipal);
-    imagenActual.setAttribute('class', CLASS_SLIDER_IMG + " " + DISPLAY_NONE);
-    idNumSlider += prevNext;
-
-    if (idNumSlider > 8) {
-        idNumSlider = 1
-    } else if (idNumSlider < 1) {
-        idNumSlider = 8
-    }    
-    slider.elementoPrincipal = ID_SLIDER + idNumSlider;
-    document.getElementById(slider.elementoPrincipal).setAttribute('class', CLASS_SLIDER_IMG);
-
-    let circleSelect = document.getElementsByClassName(CLASS_SLIDER_CIRCLES + "--big")[0];
-    circleSelect.setAttribute('class', CLASS_SLIDER_CIRCLES);
-    circleSlider[idNumSlider-1].setAttribute('class', CLASS_SLIDER_CIRCLES + " " + CLASS_SLIDER_CIRCLES + "--big");
-};
-
-window.setInterval(() => {
-    animSlider(1);
-}, 7000);
 
 document
     .querySelector('#sliderArrowLeft')
     .addEventListener('click', () => {
-        animSlider(-1);
+        clearInterval(intervalSlider);
+        slider.changeSlider(-1);
+        intervalSliderFunction();
     })
 
 document
     .querySelector('#sliderArrowRigth')
     .addEventListener('click', () => {
-        animSlider(1);
+        clearInterval(intervalSlider);
+        slider.changeSlider(1);
+        intervalSliderFunction();
     })
 
 
 for (let i = 0; i < circleSlider.length; i++) {
     circleSlider[i].addEventListener("click", (e) => {
-        let imagenActual = document.getElementById(slider.elementoPrincipal);
-
-        imagenActual.setAttribute('class', CLASS_SLIDER_IMG + " " + DISPLAY_NONE);
-        imagenesSlider[i].setAttribute('class', CLASS_SLIDER_IMG);
-
-        let circleSelect = document.getElementsByClassName(CLASS_SLIDER_CIRCLES + "--big")[0];
-        circleSelect.setAttribute('class', CLASS_SLIDER_CIRCLES);
-        e.target.setAttribute('class', CLASS_SLIDER_CIRCLES + " " + CLASS_SLIDER_CIRCLES + "--big")
-
-        slider.elementoPrincipal = imagenesSlider[i].id;
-        idNumSlider = i + 1
+        clearInterval(intervalSlider);
+        slider.changeSlider(i - (idNumSlider - 1));
+        intervalSliderFunction();
     });
 }
