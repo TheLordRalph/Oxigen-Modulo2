@@ -21,7 +21,7 @@ body {
 .percentageScroller {
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 22.5vw;
   z-index: 2;
   height: 0.5vw;
   background-color: #08A6E4;
@@ -81,6 +81,9 @@ body {
 }
 
 @media only screen and (min-width: 1000px) {
+  .percentageScroller {
+    top: 6vw;
+  }
   .returnTop {
     width: 10vw;
     height: 10vw;
@@ -106,6 +109,10 @@ body {
 .header {
   padding: 0% 6% 0% 6%;
   box-shadow: 0px 5px 5px lightgray;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: 2;
 }
 .header .header__menuLogo {
   width: 7vw;

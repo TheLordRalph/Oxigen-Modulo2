@@ -1,6 +1,10 @@
 .header {
     padding: 0% 6% 0% 6%;
     box-shadow: 0px 5px 5px lightgray;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 2;
     .header__menuLogo {
         width: 7vw;
         color: $colorPrincipal;
