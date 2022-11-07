@@ -49,22 +49,6 @@
     font-weight: 300;
 }
 
-.moneda {
-    font-size: 4.2vw;
-    font-family: $fontSecundaria;
-    font-weight: 400;
-    color: black;
-    background: none;
-    border: none;
-    border-bottom: 4px solid $colorPrincipal;
-    margin: 0 0%;
-    width: 20%;
-    padding: 8% 0;
-    .moneda__option {
-        font-size: 2.7vw;
-    }
-}
-
 .social {
     width: 24px;
     height: 24px;
@@ -100,14 +84,5 @@
 
     .logo {
         width: 22%;
-    }
-
-    .moneda {
-        font-size: 1.2vw;
-        width: 5%;
-        padding: 0;
-        .moneda__option {
-            font-size: 0.7vw;
-        }
     }
 }
