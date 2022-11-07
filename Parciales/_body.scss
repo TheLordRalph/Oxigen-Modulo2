@@ -14,9 +14,9 @@ body {
 
 .percentageScroller {
     position: sticky;
-    top: 22.5vw;
+    top: 72px;
     z-index: 2;
-    height: 0.5vw;
+    height: 5px;
     background-color: $colorPrincipal;
 }
 
@@ -74,10 +74,6 @@ body {
 }
 
 @media only screen and (min-width: 1000px) {
-
-    .percentageScroller {
-        top: 6vw;
-    }
 
     .returnTop {
         width: 10vw;
