@@ -232,7 +232,7 @@ body {
 }
 
 .botonDefault--small {
-  width: 35vw;
+  width: 150px;
   position: relative;
   margin: auto;
   bottom: 3vw;
@@ -403,8 +403,8 @@ body {
 }
 
 .cardPricing {
-  height: 63vw;
-  width: 70vw;
+  height: 270px;
+  width: 350px;
   margin: auto;
   padding: 0% 2%;
   border: 1px solid #08A6E4;
@@ -412,20 +412,20 @@ body {
   margin-bottom: 15%;
 }
 .cardPricing .cardPricing__columna {
-  height: 55vw;
-  width: 28vw;
+  height: 225px;
+  width: 150px;
   position: absolute;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 .cardPricing .cardPricing__columna .cardPricing__columna__name {
-  margin-top: 13vw;
+  margin-top: 50px;
   width: 120%;
   font-family: "Raleway", sans-serif;
-  font-size: 5vw;
+  font-size: 20px;
   font-weight: 700;
 }
 .cardPricing .cardPricing__columna .cardPricing__columna__price {
-  font-size: 14vw;
+  font-size: 46px;
   width: 120%;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
@@ -434,28 +434,28 @@ body {
 .cardPricing .cardPricing__columna .cardPricing__columna__description {
   width: 120%;
   font-family: "Raleway", sans-serif;
-  font-size: 2.5vw;
+  font-size: 12px;
   font-weight: 700;
 }
 .cardPricing .cardPricing__columna .cardPricing__columna__ventajaDesventaja {
   display: inline-flex;
   width: 100%;
-  margin: 3.1vw 0;
+  margin: 10px 0;
   text-align: start;
-  margin-top: 4vw;
 }
 .cardPricing .cardPricing__columna .cardPricing__columna__ventajaDesventaja .cardPricing__columna__ventajaDesventaja__img {
-  width: 9%;
+  width: 11px;
   margin: auto 0;
 }
 .cardPricing .cardPricing__columna .cardPricing__columna__ventajaDesventaja .cardPricing__columna__ventajaDesventaja__titulo {
   width: 80%;
   margin-left: 10%;
-  font-size: 2.6vw;
+  font-size: 14px;
   font-weight: 400;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .cardPricing .cardPricing__columna--bigRigth {
-  width: 33vw;
+  width: 160px;
   position: relative;
   left: 53%;
 }
@@ -475,14 +475,17 @@ body {
 }
 
 .cardPricing--big {
-  width: 90vw;
-  height: 65vw;
+  width: 440px;
+  height: 360px;
   padding-left: 3%;
-  box-shadow: 4px 4px 14px 1px rgba(8, 166, 228, 0.3137254902);
+  box-shadow: 4px 4px 14px 1px #08A6E4;
 }
 .cardPricing--big .cardPricing__columna {
-  margin-top: 4vw;
+  margin-top: 14px;
   margin-left: 10px;
+  width: 195px;
+  height: 320px;
+  padding-top: 55px;
 }
 
 .moneda {
@@ -842,38 +845,42 @@ body {
   .pricing {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
   }
   .pricing .pricing__title {
-    width: 70%;
+    width: 80%;
     margin-right: 150px;
   }
   .pricing .cardPricing {
     height: auto;
-    width: 25vw;
+    width: 20%;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
+    color: #08A6E4;
   }
   .pricing .cardPricing .cardPricing__columna {
     width: 100%;
     position: static;
     height: 25%;
     margin-left: 0;
+    padding: 0;
   }
   .pricing .cardPricing .cardPricing__columna .cardPricing__columna__name {
     margin-top: 1vw;
     width: 100%;
-    font-size: 2vw;
+    font-size: 21px;
+    color: black;
   }
   .pricing .cardPricing .cardPricing__columna .cardPricing__columna__price {
     width: 100%;
-    font-size: 4vw;
+    font-size: 46px;
   }
   .pricing .cardPricing .cardPricing__columna .cardPricing__columna__description {
     width: 100%;
-    font-size: 0.8vw;
+    font-size: 12px;
+    color: black;
   }
   .pricing .cardPricing .cardPricing__columna--bigRigth {
     position: static;
@@ -884,21 +891,28 @@ body {
     margin: 5% 0;
     justify-content: center;
   }
-  .pricing .cardPricing .cardPricing__columna--bigRigth .cardPricing__columna__ventajaDesventaja .cardPricing__columna__ventajaDesventaja__img {
-    width: 5%;
-  }
   .pricing .cardPricing .cardPricing__columna--bigRigth .cardPricing__columna__ventajaDesventaja .cardPricing__columna__ventajaDesventaja__titulo {
-    font-size: 1vw;
     width: auto;
     margin-left: 5%;
     text-align: center;
+    color: black;
+  }
+  .pricing .cardPricing--pink {
+    color: #FB3B64;
+  }
+  .pricing .cardPricing--green {
+    color: #55DFB4;
   }
   .pricing .cardPricing--big {
-    width: 30vw;
-    height: 40vw;
-    padding: 0 2%;
+    box-shadow: none;
+    margin: 0 5%;
   }
-  .pricing .cardPricing--big .cardPricing__columna--bigRigth {
+  .pricing .cardPricing:hover {
+    width: 25%;
+    padding: 0 2%;
+    box-shadow: 4px 4px 14px 1px currentColor;
+  }
+  .pricing .cardPricing:hover .cardPricing__columna--bigRigth {
     height: 47%;
   }
   .moneda {
