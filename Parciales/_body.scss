@@ -34,13 +34,14 @@ body {
 
 .newsletter {
     position: fixed;
-    background-color: #c1c1c1c0;
-    margin: 0;
-    padding: 20% 5%;
-    width: 100%;
-    height: 1000vw;
+    background-color: white;
+    margin: 5% 25%;
+    padding: 5% 5%;
+    width: 50%;
+    height: 55%;
     text-align: center;
     z-index: 3;
+    border: 4px solid;
     .newsletter__cross {
         width: 15%;
         position: absolute;
@@ -49,8 +50,8 @@ body {
     }
     .newsletter__title {
         width: 70%;
-        margin: 10% auto;
-        font-size: 5vw;
+        margin: 5% auto;
+        font-size: 30px;
         font-family: $fontPrincipal;
         font-weight: 400;
     }
@@ -83,7 +84,7 @@ body {
     }
 
     .newsletter {
-        padding: 5% 5%;
+        height: 80%;
         .newsletter__cross {
             width: 5%;
             top: 0.5%;
