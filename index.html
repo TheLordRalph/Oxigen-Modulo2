@@ -27,10 +27,10 @@
             <path id="menuCross" class="displayNone" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
         </svg>
         <ul id="menu" class="header__menu displayNone">
-            <li class="header__menu__menuEnlaces header__menu__menuEnlaces--black"><a href="#">WHY US</a></li>
-            <li class="header__menu__menuEnlaces"><a href="#">BENEFITS</a></li>
-            <li class="header__menu__menuEnlaces"><a href="#">PRICES</a></li>
-            <li class="header__menu__menuEnlaces"><a href="#">CONTACT</a></li>
+            <li value="0" class="header__menu__menuEnlaces header__menu__menuEnlaces--black"><a>WHY US</a></li>
+            <li value="32" class="header__menu__menuEnlaces"><a>BENEFITS</a></li>
+            <li value="63" class="header__menu__menuEnlaces"><a>PRICES</a></li>
+            <li value="93" class="header__menu__menuEnlaces"><a>CONTACT</a></li>
         </ul>
     </header>
     <div id="percentageScroller" class="percentageScroller" style="width: 0;"></div>
@@ -72,7 +72,7 @@
         </div>
     </section>
 
-    <section class="cardsDescription">
+    <section id="benefits" class="cardsDescription">
         <div class="cardsDescription__card">
             <div class="backgroundCircle backgroundCircle--pink backgroundCircle--pink--radius"></div>
             <img class="cardsDescription__card__imagen" src="Imagenes/Macbook.png" alt="">
@@ -106,7 +106,7 @@
         </div>
     </section>
 
-    <section class="pricing">
+    <section id="prices" class="pricing">
         <select class="moneda" name="" id="moneda">
             <option class="moneda__option" value="usd">USD</option>
             <option class="moneda__option" value="eur">EUR</option>
@@ -191,7 +191,7 @@
         <img class="slider__img displayNone" id="slider8" src="Imagenes/slider8.jpg" alt="">
     </div>
 
-    <section class="information">
+    <section id="contact" class="information">
         <div class="information__infoContacto">
             <h1 class="information__title">Any questions?</h1>
             <h4 class="information__description">Leave your email address or call us!</h4>

@@ -1,6 +1,8 @@
 const CLASS_MENU = "header__menu ";
 const DISPLAY_NONE = "displayNone";
 
+const CLASS_MENU_ENLACES = "header__menu__menuEnlaces";
+
 const CLASS_FORM = "form__input";
 const CLASS_FORM_CHECKBOX = "form__personalData__checkbox__input";
 
@@ -49,6 +51,22 @@ const percentageScroller = () => {
             newsletter();
         }
     }
+
+    if (scrollPercent >= 32 && scrollPercent < 63) {
+        document.getElementsByClassName('header__menu__menuEnlaces--black')[0].setAttribute('class', CLASS_MENU_ENLACES)
+        document.getElementsByClassName('header__menu__menuEnlaces')[1].setAttribute('class', CLASS_MENU_ENLACES + ' ' + CLASS_MENU_ENLACES + '--black')
+    } else if (scrollPercent >= 63 && scrollPercent < 93) {
+        document.getElementsByClassName('header__menu__menuEnlaces--black')[0].setAttribute('class', CLASS_MENU_ENLACES)
+        document.getElementsByClassName('header__menu__menuEnlaces')[2].setAttribute('class', CLASS_MENU_ENLACES + ' ' + CLASS_MENU_ENLACES + '--black')
+    } else if (scrollPercent >= 93 && scrollPercent <= 100) {
+        document.getElementsByClassName('header__menu__menuEnlaces--black')[0].setAttribute('class', CLASS_MENU_ENLACES)
+        document.getElementsByClassName('header__menu__menuEnlaces')[3].setAttribute('class', CLASS_MENU_ENLACES + ' ' + CLASS_MENU_ENLACES + '--black')
+    } else {
+        document.getElementsByClassName('header__menu__menuEnlaces--black')[0].setAttribute('class', CLASS_MENU_ENLACES)
+        document.getElementsByClassName('header__menu__menuEnlaces')[0].setAttribute('class', CLASS_MENU_ENLACES + ' ' + CLASS_MENU_ENLACES + '--black')
+    }
+
+    return scrollPercent;
 }
 
 window.addEventListener('scroll', percentageScroller);
@@ -57,12 +75,12 @@ window.addEventListener('scroll', percentageScroller);
 
 // Funcionality Scroll to the top page.
 
-const scrollTop = () => {
+const scroll = (scrollPercent) => {
     let intervalScroll = setInterval(function() {
-        window.scrollTo(0, window.scrollY - 10);
-        console.log(window.scrollY);
 
-        if (window.scrollY <= 0) {
+        scrollPercent <= percentageScroller() ? window.scrollTo(0, window.scrollY - 10) : window.scrollTo(0, window.scrollY + 10);
+
+        if (percentageScroller() == scrollPercent) {
             clearInterval(intervalScroll);
         return;
         } 
@@ -73,8 +91,22 @@ const scrollTop = () => {
 document
     .querySelector('#returnTop')
     .addEventListener('click', () => {
-        window.setTimeout(scrollTop, 200)
+        window.setTimeout(scroll(0), 200)
     });
+
+
+
+// Funcionality menu
+
+const menu = document.querySelectorAll('.header__menu__menuEnlaces')
+menu.forEach(e => {
+    e.addEventListener('click', () => {
+        document.getElementsByClassName('header__menu__menuEnlaces--black')[0].setAttribute('class', CLASS_MENU_ENLACES)
+        e.setAttribute('class', CLASS_MENU_ENLACES + ' ' + CLASS_MENU_ENLACES + '--black')
+    
+        scroll(e.value)
+    });
+});
 
 
 

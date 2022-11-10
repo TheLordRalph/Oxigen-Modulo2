@@ -177,6 +177,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
   }
   .header .header__menu .header__menu__menuEnlaces a, .header .displayNone .header__menu__menuEnlaces a {
     letter-spacing: 0.2vw;
