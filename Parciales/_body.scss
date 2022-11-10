@@ -21,13 +21,15 @@ body {
 }
 
 .returnTop {
-    margin: 10% 0 0 42.5%;
-    padding: 3%;
     background-color: #e6e6e6;
     border-radius: 100%;
-    width: 20vw;
-    height: 20vw;
+    width: 65px;
+    height: 65px;
     color: #A5A5A5;
+    position: fixed;
+    top: 63%;
+    left: 85%;
+    cursor: pointer;
 }
 
 .newsletter {
@@ -76,9 +78,8 @@ body {
 @media only screen and (min-width: 1000px) {
 
     .returnTop {
-        width: 10vw;
-        height: 10vw;
-        padding: 2%;
+        top: 65%;
+        left: 93%;
     }
 
     .newsletter {
