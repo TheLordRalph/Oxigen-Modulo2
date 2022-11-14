@@ -14,17 +14,112 @@ body {
   min-width: 320px;
 }
 
+.displayNone {
+  display: none;
+}
+
+.percentageScroller {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 72px;
+  z-index: 2;
+  height: 5px;
+  background-color: #08A6E4;
+}
+
+.returnTop {
+  background-color: #e6e6e6;
+  border-radius: 100%;
+  width: 65px;
+  height: 65px;
+  color: #A5A5A5;
+  position: fixed;
+  top: 63%;
+  left: 85%;
+  cursor: pointer;
+}
+
+.newsletter {
+  position: fixed;
+  background-color: white;
+  margin: 5% 25%;
+  padding: 5% 5%;
+  width: 50%;
+  height: 55%;
+  text-align: center;
+  z-index: 3;
+  border: 4px solid;
+}
+.newsletter .newsletter__cross {
+  width: 15%;
+  position: absolute;
+  right: 10%;
+  top: 1%;
+}
+.newsletter .newsletter__title {
+  width: 70%;
+  margin: 5% auto;
+  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+.newsletter .newsletter__name {
+  width: 70%;
+  margin: auto;
+  text-align: initial;
+  color: #08A6E4;
+  font-size: 2vw;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.newsletter .newsletter__input {
+  width: 70%;
+  background: none;
+  border: none;
+  border-bottom: 2px solid black;
+  height: 7vw;
+  font-size: 3vw;
+}
+.newsletter .newsletter__input--red {
+  border-color: red;
+}
+
+@media only screen and (min-width: 1000px) {
+  .returnTop {
+    top: 65%;
+    left: 93%;
+  }
+  .newsletter {
+    height: 80%;
+  }
+  .newsletter .newsletter__cross {
+    width: 5%;
+    top: 0.5%;
+  }
+  .newsletter .newsletter__title {
+    font-size: 3vw;
+    margin: 5% auto;
+  }
+  .newsletter .newsletter__input {
+    height: 5vw;
+    font-size: 2vw;
+    margin-bottom: 5%;
+  }
+}
 .header {
   padding: 0% 6% 0% 6%;
   box-shadow: 0px 5px 5px lightgray;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: 2;
 }
 .header .header__menuLogo {
-  width: 7vw;
+  width: 30px;
   color: #08A6E4;
   display: inline-block;
   position: relative;
   top: 0.4em;
-  margin-left: 10%;
+  margin-left: 25%;
 }
 .header .header__menu {
   padding: 0% 0% 5% 5%;
@@ -36,7 +131,7 @@ body {
 .header .header__menu .header__menu__menuEnlaces a {
   text-decoration: none;
   color: #A5A5A5;
-  font-size: 3.5vw;
+  font-size: 11px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   letter-spacing: 1vw;
   font-weight: 700;
@@ -44,14 +139,14 @@ body {
 .header .header__menu .header__menu__menuEnlaces--black a {
   color: black;
 }
-.header .header__menu--displayNone {
+.header .displayNone {
   display: none;
 }
 
 .logo {
-  font-size: 7vw;
-  padding: 8%;
-  width: 75%;
+  font-size: 32px;
+  padding: 17px 0;
+  width: 60%;
   color: #08A6E4;
   display: inline-block;
   font-family: "Raleway", sans-serif;
@@ -66,51 +161,51 @@ body {
 @media only screen and (min-width: 1000px) {
   .header {
     display: flex;
+    justify-content: space-between;
   }
   .header .header__menuLogo {
     display: none;
   }
-  .header .header__menu, .header .header__menu--displayNone {
+  .header .header__menu, .header .displayNone {
     display: flex;
-    width: 100%;
+    width: 50%;
     padding: 0;
     justify-content: end;
   }
-  .header .header__menu .header__menu__menuEnlaces, .header .header__menu--displayNone .header__menu__menuEnlaces {
+  .header .header__menu .header__menu__menuEnlaces, .header .displayNone .header__menu__menuEnlaces {
     margin: 0 3%;
-    width: 8%;
+    width: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
   }
-  .header .header__menu .header__menu__menuEnlaces a, .header .header__menu--displayNone .header__menu__menuEnlaces a {
-    font-size: 0.8vw;
+  .header .header__menu .header__menu__menuEnlaces a, .header .displayNone .header__menu__menuEnlaces a {
     letter-spacing: 0.2vw;
   }
-  .header .header__menu .header__menu__menuEnlaces--black, .header .header__menu--displayNone .header__menu__menuEnlaces--black {
+  .header .header__menu .header__menu__menuEnlaces--black, .header .displayNone .header__menu__menuEnlaces--black {
     border-bottom: 4px solid #08A6E4;
   }
   .logo {
-    font-size: 2vw;
-    padding: 2%;
     width: 22%;
   }
 }
 .cardOpenShop {
   text-align: center;
-  margin: 20% 0;
+  margin: 170px 0 50px 0;
 }
 .cardOpenShop .cardOpenShop__titulo {
   margin-bottom: 2%;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: 8vw;
+  font-size: 35px;
 }
 .cardOpenShop .cardOpenShop__descripcion {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
-  font-size: 4vw;
-  margin: 0% 18%;
+  font-size: 16px;
+  margin: 20px auto 28px auto;
+  width: 300px;
 }
 .cardOpenShop .cardOpenShop__imagen {
   width: 100%;
@@ -121,26 +216,26 @@ body {
 }
 
 .botonDefault {
-  width: 60vw;
-  margin: 10% auto;
+  width: 300px;
+  margin: 0 auto 50px auto;
   background-color: #08A6E4;
   color: white;
-  height: 18vw;
+  height: 67px;
   border-radius: 100px;
   box-shadow: 10px 10px 10px rgba(8, 166, 228, 0.3137254902);
   text-align: center;
 }
 .botonDefault span {
-  font-size: 4vw;
+  font-size: 16px;
   color: white;
   display: block;
-  padding-top: 6vw;
+  padding-top: 20px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
 }
 
 .botonDefault--small {
-  width: 35vw;
+  width: 150px;
   position: relative;
   margin: auto;
   bottom: 3vw;
@@ -160,15 +255,22 @@ body {
   margin: 10% 0% 10% 25%;
 }
 
+.botonDefault--popUp {
+  width: 120px;
+  margin-top: 5%;
+}
+
 .cardPlataformData {
-  width: 75%;
+  width: 90%;
   text-align: center;
   margin: auto;
 }
 .cardPlataformData .cardPlataformData__titulo {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
-  font-size: 8.5vw;
+  font-size: 30px;
+  width: 80%;
+  margin: auto;
 }
 .cardPlataformData .cardPlataformData__dato {
   width: 50%;
@@ -179,7 +281,7 @@ body {
   margin: auto;
 }
 .cardPlataformData .cardPlataformData__dato .cardPlataformData__dato__miniLogo .cardPlataformData__dato__miniLogo__imagen {
-  width: 50%;
+  width: 40%;
   position: relative;
   top: 1px;
   left: 6px;
@@ -201,7 +303,7 @@ body {
   font-weight: 800;
   position: relative;
   letter-spacing: 1.5vw;
-  font-size: 4vw;
+  font-size: 20px;
 }
 .cardPlataformData .cardPlataformData__dato .cardPlataformData__dato__descripcion {
   font-family: "Raleway", sans-serif;
@@ -209,7 +311,7 @@ body {
   top: 2vw;
   font-weight: 400;
   color: #A5A5A5;
-  font-size: 3vw;
+  font-size: 16px;
   width: 70%;
   left: 10%;
 }
@@ -286,14 +388,14 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   margin: 10% 2%;
-  font-size: 6vw;
+  font-size: 30px;
   line-height: 9vw;
 }
 .cardsDescription .cardsDescription__card .cardsDescription__card__text .cardsDescription__card__text__descripccion {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   margin: 10% 2%;
-  font-size: 3vw;
+  font-size: 14px;
   line-height: 5vw;
 }
 
@@ -305,12 +407,12 @@ body {
   margin-bottom: 2%;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: 9vw;
+  font-size: 36px;
 }
 
 .cardPricing {
-  height: 63vw;
-  width: 70vw;
+  height: 270px;
+  width: 80%;
   margin: auto;
   padding: 0% 2%;
   border: 1px solid #08A6E4;
@@ -318,20 +420,20 @@ body {
   margin-bottom: 15%;
 }
 .cardPricing .cardPricing__columna {
-  height: 55vw;
-  width: 28vw;
+  height: 225px;
+  width: 35%;
   position: absolute;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 .cardPricing .cardPricing__columna .cardPricing__columna__name {
-  margin-top: 13vw;
+  margin-top: 50px;
   width: 120%;
   font-family: "Raleway", sans-serif;
-  font-size: 5vw;
+  font-size: 20px;
   font-weight: 700;
 }
 .cardPricing .cardPricing__columna .cardPricing__columna__price {
-  font-size: 14vw;
+  font-size: 46px;
   width: 120%;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
@@ -340,28 +442,28 @@ body {
 .cardPricing .cardPricing__columna .cardPricing__columna__description {
   width: 120%;
   font-family: "Raleway", sans-serif;
-  font-size: 2.5vw;
+  font-size: 12px;
   font-weight: 700;
 }
 .cardPricing .cardPricing__columna .cardPricing__columna__ventajaDesventaja {
   display: inline-flex;
   width: 100%;
-  margin: 3.1vw 0;
+  margin: 10px 0;
   text-align: start;
-  margin-top: 4vw;
 }
 .cardPricing .cardPricing__columna .cardPricing__columna__ventajaDesventaja .cardPricing__columna__ventajaDesventaja__img {
-  width: 9%;
+  width: 11px;
   margin: auto 0;
 }
 .cardPricing .cardPricing__columna .cardPricing__columna__ventajaDesventaja .cardPricing__columna__ventajaDesventaja__titulo {
   width: 80%;
   margin-left: 10%;
-  font-size: 2.6vw;
+  font-size: 14px;
   font-weight: 400;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .cardPricing .cardPricing__columna--bigRigth {
-  width: 33vw;
+  width: 50%;
   position: relative;
   left: 53%;
 }
@@ -377,18 +479,82 @@ body {
   border-color: #55DFB4;
 }
 .cardPricing--green .cardPricing__columna .cardPricing__columna__price--green {
-  color: #FB3B64;
+  color: #55DFB4;
 }
 
 .cardPricing--big {
-  width: 90vw;
-  height: 65vw;
+  width: 90%;
+  height: 360px;
   padding-left: 3%;
-  box-shadow: 4px 4px 14px 1px rgba(8, 166, 228, 0.3137254902);
+  box-shadow: 4px 4px 14px 1px #08A6E4;
 }
 .cardPricing--big .cardPricing__columna {
-  margin-top: 4vw;
+  margin-top: 14px;
   margin-left: 10px;
+  width: 155px;
+  height: 320px;
+  padding-top: 55px;
+}
+
+.moneda {
+  position: absolute;
+  left: 4%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: black;
+  background: none;
+  border: none;
+  margin: 6px 0%;
+  width: 90px;
+}
+.moneda .moneda__option {
+  font-size: 15px;
+}
+
+.slider {
+  margin: 20% 0;
+  height: 56vw;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+.slider .slider__img {
+  width: 100%;
+  height: 70%;
+}
+.slider .slider__arrow {
+  width: 7%;
+  position: relative;
+  top: 26vw;
+  color: white;
+  right: 40%;
+  cursor: pointer;
+}
+.slider .slider__arrow--right {
+  left: 40%;
+}
+.slider .slider__circles {
+  position: relative;
+  top: 65%;
+  left: 35%;
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  align-items: center;
+}
+.slider .slider__circles .slider__circles__circle {
+  width: 2vw;
+  background-color: white;
+  height: 2vw;
+  border-radius: 100%;
+  opacity: 70%;
+  cursor: pointer;
+}
+.slider .slider__circles .slider__circles__circle--big {
+  width: 2.5vw;
+  height: 2.5vw;
+  opacity: 1;
 }
 
 .information {
@@ -432,12 +598,16 @@ body {
   letter-spacing: 3.28px;
   font-size: 4vw;
 }
-.form .form__inpu {
+.form .form__input {
   border: none;
   border-bottom: 1px solid #95989A;
   width: 80vw;
   height: 6vw;
   margin-bottom: 10%;
+  background: none;
+}
+.form .form__input--red {
+  border-color: red;
 }
 .form .form__personalData .form__personalData__checkbox {
   font-family: system-ui, sans-serif;
@@ -450,7 +620,7 @@ body {
   float: left;
   width: 4vw;
 }
-.form .form__personalData .form__personalData__checkbox input {
+.form .form__personalData .form__personalData__checkbox .form__personalData__checkbox__input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -466,7 +636,10 @@ body {
   display: grid;
   place-content: center;
 }
-.form .form__personalData .form__personalData__checkbox input::before {
+.form .form__personalData .form__personalData__checkbox .form__personalData__checkbox__input--red {
+  border-color: red;
+}
+.form .form__personalData .form__personalData__checkbox .form__personalData__checkbox__input::before {
   content: "";
   width: 2.6vw;
   height: 2.6vw;
@@ -478,10 +651,10 @@ body {
   box-shadow: inset 1em 1em var(--form-control-color);
   background-color: CanvasText;
 }
-.form .form__personalData .form__personalData__checkbox input:checked::before {
+.form .form__personalData .form__personalData__checkbox .form__personalData__checkbox__input:checked::before {
   transform: scale(1);
 }
-.form .form__personalData .form__personalData__checkbox input:disabled {
+.form .form__personalData .form__personalData__checkbox .form__personalData__checkbox__input:disabled {
   --form-control-color: var(--form-control-disabled);
   color: var(--form-control-disabled);
   cursor: not-allowed;
@@ -489,7 +662,7 @@ body {
 .form .form__personalData .form__personalData__text {
   display: inline-block;
   width: 72vw;
-  margin-left: 10px;
+  margin-left: 5%;
   position: relative;
   bottom: 5px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -500,33 +673,32 @@ body {
 
 @media only screen and (min-width: 1000px) {
   .cardOpenShop {
-    margin: 10% 0 2% 0;
+    margin: 200px 0 100px 0;
   }
   .cardOpenShop .cardOpenShop__titulo {
-    font-size: 3vw;
+    font-size: 49px;
     margin-bottom: 0%;
   }
   .cardOpenShop .cardOpenShop__descripcion {
-    font-size: 1vw;
-    margin: 2% auto;
-    height: 2vw;
+    width: 400px;
   }
   .cardOpenShop .cardOpenShop__imagen {
     width: 100%;
     position: static;
     display: block;
+<<<<<<< HEAD
+=======
+  }
+  .cardOpenShop .cardOpenShop__imagen--small {
+    display: none;
+>>>>>>> 32f1fc5e7846c16e46fd018b8f6126a39fd23554
   }
   .cardOpenShop .cardOpenShop__imagen--small {
     display: none;
   }
   .botonDefault {
-    width: 30%;
-    height: 6vw;
-    margin: 1% auto;
-  }
-  .botonDefault span {
-    font-size: 1.5vw;
-    padding-top: 2vw;
+    width: 440px;
+    cursor: pointer;
   }
   .botonDefault--small {
     bottom: -1.5vw;
@@ -535,7 +707,7 @@ body {
   }
   .botonDefault--small span {
     padding-top: 1vw;
-    font-size: 0.9vw;
+    font-size: 13px;
   }
   .botonDefault--right {
     height: 4vw;
@@ -544,7 +716,7 @@ body {
   }
   .botonDefault--right span {
     padding-top: 1.5vw;
-    font-size: 0.8vw;
+    font-size: 13px;
   }
   .cardPlataformData {
     display: flex;
@@ -552,7 +724,7 @@ body {
     justify-content: center;
   }
   .cardPlataformData .cardPlataformData__titulo {
-    font-size: 2vw;
+    font-size: 36px;
     font-weight: 400;
     width: 100%;
   }
@@ -621,13 +793,13 @@ body {
   .cardsDescription .cardsDescription__card .cardsDescription__card__text .cardsDescription__card__text__titulo {
     width: 80%;
     margin: 10% 0 5% 5%;
-    font-size: 2.3vw;
+    font-size: 36px;
     line-height: 2.63vw;
   }
   .cardsDescription .cardsDescription__card .cardsDescription__card__text .cardsDescription__card__text__descripccion {
     width: 55%;
     margin: 2% 5%;
-    font-size: 1vw;
+    font-size: 16px;
     line-height: 1.4vw;
   }
   .cardsDescription .cardsDescription__card .cardsDescription__card__imagen {
@@ -687,38 +859,42 @@ body {
   .pricing {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
   }
   .pricing .pricing__title {
-    width: 100%;
-    font-size: 4vw;
+    width: 10%;
+    margin-right: 31%;
   }
   .pricing .cardPricing {
     height: auto;
-    width: 25vw;
+    width: 20%;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
+    color: #08A6E4;
   }
   .pricing .cardPricing .cardPricing__columna {
     width: 100%;
     position: static;
     height: 25%;
     margin-left: 0;
+    padding: 0;
   }
   .pricing .cardPricing .cardPricing__columna .cardPricing__columna__name {
     margin-top: 1vw;
     width: 100%;
-    font-size: 2vw;
+    font-size: 21px;
+    color: black;
   }
   .pricing .cardPricing .cardPricing__columna .cardPricing__columna__price {
     width: 100%;
-    font-size: 4vw;
+    font-size: 46px;
   }
   .pricing .cardPricing .cardPricing__columna .cardPricing__columna__description {
     width: 100%;
-    font-size: 0.8vw;
+    font-size: 12px;
+    color: black;
   }
   .pricing .cardPricing .cardPricing__columna--bigRigth {
     position: static;
@@ -729,22 +905,40 @@ body {
     margin: 5% 0;
     justify-content: center;
   }
-  .pricing .cardPricing .cardPricing__columna--bigRigth .cardPricing__columna__ventajaDesventaja .cardPricing__columna__ventajaDesventaja__img {
-    width: 5%;
-  }
   .pricing .cardPricing .cardPricing__columna--bigRigth .cardPricing__columna__ventajaDesventaja .cardPricing__columna__ventajaDesventaja__titulo {
-    font-size: 1vw;
     width: auto;
     margin-left: 5%;
     text-align: center;
+    color: black;
+  }
+  .pricing .cardPricing--pink {
+    color: #FB3B64;
+  }
+  .pricing .cardPricing--green {
+    color: #55DFB4;
   }
   .pricing .cardPricing--big {
-    width: 30vw;
-    height: 40vw;
-    padding: 0 2%;
+    box-shadow: none;
+    margin: 0 5%;
   }
-  .pricing .cardPricing--big .cardPricing__columna--bigRigth {
+  .pricing .cardPricing:hover {
+    transform: scale(110%);
+    padding: 0 2%;
+    box-shadow: 4px 4px 14px 1px currentColor;
+  }
+  .pricing .cardPricing:hover .cardPricing__columna--bigRigth {
     height: 47%;
+  }
+  .moneda {
+    position: static;
+    font-size: 25px;
+    width: 10%;
+    padding: 0;
+    margin-left: 32%;
+    margin-bottom: 2%;
+  }
+  .moneda .moneda__option {
+    font-size: 20px;
   }
   .information {
     display: flex;
@@ -786,7 +980,7 @@ body {
   .information .form .form__title {
     font-size: 0.64vw;
   }
-  .information .form .form__inpu {
+  .information .form .form__input {
     width: 100%;
     height: 3vw;
     font-size: 1.5vw;
@@ -798,16 +992,16 @@ body {
   .information .form .form__personalData .form__personalData__checkbox {
     width: 2vw;
   }
-  .information .form .form__personalData .form__personalData__checkbox input {
+  .information .form .form__personalData .form__personalData__checkbox .form__personalData__checkbox__input {
     width: 1.5vw;
     height: 1.5vw;
   }
-  .information .form .form__personalData .form__personalData__checkbox input::before {
+  .information .form .form__personalData .form__personalData__checkbox .form__personalData__checkbox__input::before {
     width: 0.8vw;
     height: 0.8vw;
   }
   .information .form .form__personalData .form__personalData__text {
-    width: 89%;
+    width: 85%;
     font-size: 0.7vw;
   }
 }

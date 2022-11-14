@@ -1,13 +1,17 @@
 .header {
     padding: 0% 6% 0% 6%;
     box-shadow: 0px 5px 5px lightgray;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 2;
     .header__menuLogo {
-        width: 7vw;
+        width: 30px;
         color: $colorPrincipal;
         display: inline-block;
         position: relative;
         top: 0.4em;
-        margin-left: 10%;
+        margin-left: 25%;
     }
     .header__menu {
         padding: 0% 0% 5% 5%;;
@@ -17,7 +21,7 @@
             a {
                text-decoration: none;
                color: #A5A5A5; 
-               font-size: 3.5vw;
+               font-size: 11px;
                font-family: $fontSecundaria;
                letter-spacing: 1vw;
                font-weight: 700;
@@ -30,15 +34,15 @@
         }
     }
 
-    .header__menu--displayNone {
+    .displayNone {
         display: none;
     }
 }
 
 .logo {
-    font-size: 7vw;
-    padding: 8%;
-    width: 75%;
+    font-size: 32px;
+    padding: 17px 0;
+    width: 60%;
     color: $colorPrincipal;
     display: inline-block;
     font-family: $fontPrincipal;
@@ -53,22 +57,23 @@
 @media only screen and (min-width: 1000px) {
     .header {
         display: flex;
+        justify-content: space-between;
         .header__menuLogo {
             display: none;
         }
-        .header__menu, .header__menu--displayNone {
+        .header__menu, .displayNone {
             display: flex;
-            width: 100%;
+            width: 50%;
             padding: 0;
             justify-content: end;
             .header__menu__menuEnlaces {
                 margin: 0 3%;
-                width: 8%;
+                width: 15%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                cursor: pointer;
                 a {
-                    font-size: 0.8vw;
                     letter-spacing: 0.2vw;
                 }
             }
@@ -79,8 +84,6 @@
     }
 
     .logo {
-        font-size: 2vw;
-        padding: 2%;
         width: 22%;
     }
 }

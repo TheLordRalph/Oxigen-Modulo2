@@ -9,19 +9,32 @@
 </head>
 <body>
 
+    
+    <div id="popUp" class="newsletter displayNone">
+        <svg id="newsletterCross" class="newsletter__cross" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path id="" class="" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+        </svg>
+        <h1 class="newsletter__title">Subscribe to our newsletter</h1>
+        <p class="newsletter__name">Email</p>
+        <input class="newsletter__input" type="email" name="" id="newsletterEmail">
+        <div id="newsletterBtn" class="botonDefault botonDefault--popUp"><span>Send</span></div>
+    </div>
+    
     <header class="header">
         <h1 class="logo">OXYGENShop</h1>
-        <svg class="header__menuLogo" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+        <svg id="menuBtn" class="header__menuLogo" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path id="munuBurger" class="" fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            <path id="menuCross" class="displayNone" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
         </svg>
-        <ul class="header__menu  header__menu--displayNone">
-            <li class="header__menu__menuEnlaces header__menu__menuEnlaces--black"><a href="#">WHY US</a></li>
-            <li class="header__menu__menuEnlaces"><a href="#">BENEFITS</a></li>
-            <li class="header__menu__menuEnlaces"><a href="#">PRICES</a></li>
-            <li class="header__menu__menuEnlaces"><a href="#">CONTACT</a></li>
+        <ul id="menu" class="header__menu displayNone">
+            <li value="0" class="header__menu__menuEnlaces header__menu__menuEnlaces--black"><a>WHY US</a></li>
+            <li value="32" class="header__menu__menuEnlaces"><a>BENEFITS</a></li>
+            <li value="63" class="header__menu__menuEnlaces"><a>PRICES</a></li>
+            <li value="93" class="header__menu__menuEnlaces"><a>CONTACT</a></li>
         </ul>
     </header>
-
+    <div id="percentageScroller" class="percentageScroller" style="width: 0;"></div>
+    
     <section class="cardOpenShop">
         <h1 class="cardOpenShop__titulo">Sell More!</h1>
         <p class="cardOpenShop__descripcion">Open shop on our platform and 
@@ -59,7 +72,7 @@
         </div>
     </section>
 
-    <section class="cardsDescription">
+    <section id="benefits" class="cardsDescription">
         <div class="cardsDescription__card">
             <div class="backgroundCircle backgroundCircle--pink backgroundCircle--pink--radius"></div>
             <img class="cardsDescription__card__imagen" src="Imagenes/Macbook.png" alt="">
@@ -93,7 +106,12 @@
         </div>
     </section>
 
-    <section class="pricing">
+    <section id="prices" class="pricing">
+        <select class="moneda" name="" id="moneda">
+            <option class="moneda__option" value="usd">USD</option>
+            <option class="moneda__option" value="eur">EUR</option>
+            <option class="moneda__option" value="gbp">GBP</option>
+        </select>
         <h1 class="pricing__title">Pricing</h1>
         <div class="cardPricing cardPricing--pink">
             <div class="cardPricing__columna">
@@ -146,7 +164,34 @@
         </div>
     </section>
 
-    <section class="information">
+    <div class="slider" id="slider">
+        <svg id="sliderArrowLeft" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="slider__arrow" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+        </svg>
+        <svg id="sliderArrowRigth" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="slider__arrow slider__arrow--right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+        </svg>
+        <div class="slider__circles">
+            <div id="circleSlider1" class="slider__circles__circle slider__circles__circle--big"></div>
+            <div id="circleSlider2" class="slider__circles__circle"></div>
+            <div id="circleSlider3" class="slider__circles__circle"></div>
+            <div id="circleSlider4" class="slider__circles__circle"></div>
+            <div id="circleSlider5" class="slider__circles__circle"></div>
+            <div id="circleSlider6" class="slider__circles__circle"></div>
+            <div id="circleSlider7" class="slider__circles__circle"></div>
+            <div id="circleSlider8" class="slider__circles__circle"></div>
+        </div>
+        <img class="slider__img" id="slider1" src="Imagenes/slider1.jpg" alt="">
+        <img class="slider__img displayNone" id="slider2" src="Imagenes/slider2.jpg" alt="">
+        <img class="slider__img displayNone" id="slider3" src="Imagenes/slider3.jpg" alt="">
+        <img class="slider__img displayNone" id="slider4" src="Imagenes/slider4.jpg" alt="">
+        <img class="slider__img displayNone" id="slider5" src="Imagenes/slider5.jpg" alt="">
+        <img class="slider__img displayNone" id="slider6" src="Imagenes/slider6.jpg" alt="">
+        <img class="slider__img displayNone" id="slider7" src="Imagenes/slider7.jpg" alt="">
+        <img class="slider__img displayNone" id="slider8" src="Imagenes/slider8.jpg" alt="">
+    </div>
+
+    <section id="contact" class="information">
         <div class="information__infoContacto">
             <h1 class="information__title">Any questions?</h1>
             <h4 class="information__description">Leave your email address or call us!</h4>
@@ -162,20 +207,24 @@
 
         <div class="form">
             <h5 class="form__title">NAME</h5>
-            <input class="form__inpu" type="text" name="" id="">
+            <input class="form__input" type="text" name="" id="formName">
             <h5 class="form__title">EMAIL</h5>
-            <input class="form__inpu" type="email" name="" id="">
+            <input class="form__input" type="email" name="" id="formEmail">
             <div class="form__personalData">
                 <label class="form__personalData__checkbox">
-                    <input type="checkbox" name="checkbox" />
+                    <input class="form__personalData__checkbox__input" type="checkbox" name="checkbox" id="formCheck"/>
                 </label>
                 <p class="form__personalData__text">
                     I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
                 </p>
             </div>
-            <div class="botonDefault botonDefault--right"><span>Send</span></div>
+            <div id="formBtn" class="botonDefault botonDefault--right"><span>Send</span></div>
         </div>
     </section>
+
+    <svg class="returnTop" id="returnTop" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+    </svg>
 
     <footer class="footer">
         <div class="footer__logo">
@@ -187,5 +236,6 @@
         
     </footer>
     
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,17 +1,18 @@
 .cardOpenShop {
     text-align: center;
-    margin: 20% 0;
+    margin: 170px 0 50px 0;
     .cardOpenShop__titulo {
         margin-bottom: 2%;
         font-family: $fontPrincipal;
         font-weight: 400;
-        font-size: 8vw;
+        font-size: 35px;
     }
     .cardOpenShop__descripcion {
         font-family: $fontSecundaria;
         font-weight: 400;
-        font-size: 4vw;
-        margin: 0% 18%;
+        font-size: 16px;
+        margin: 20px auto 28px auto;
+        width: 300px;
     }
     .cardOpenShop__imagen {
         width: 100%;
@@ -23,26 +24,26 @@
 }
 
 .botonDefault {
-    width: 60vw;
-    margin: 10% auto;
-    background-color: $colorPrincipal;
+    width: 300px;
+    margin: 0 auto 50px auto;
+    background-color: #08A6E4;
     color: white;
-    height: 18vw;
+    height: 67px;
     border-radius: 100px;
-    box-shadow: 10px 10px 10px $colorPrincipalOpacity;
+    box-shadow: 10px 10px 10px rgba(8, 166, 228, 0.3137254902);
     text-align: center;
     span {
-        font-size: 4vw;
+        font-size: 16px;
         color: white;
         display: block;
-        padding-top: 6vw;
+        padding-top: 20px;
         font-family: $fontSecundaria;
         font-weight: 700;
     }
 }
 
 .botonDefault--small {
-    width: 35vw;
+    width: 150px;
     position: relative;
     margin: auto;
     bottom: 3vw;
@@ -59,15 +60,21 @@
 .botonDefault--right {
     margin: 10% 0% 10% 25%;
 }
+.botonDefault--popUp {
+    width: 120px;
+    margin-top: 5%;
+}
 
 .cardPlataformData {
-    width: 75%;
+    width: 90%;
     text-align: center;
     margin: auto;
     .cardPlataformData__titulo {
         font-family: $fontPrincipal;
         font-weight: 300;
-        font-size: 8.5vw;
+        font-size: 30px;
+        width: 80%;
+        margin: auto;
     }
     .cardPlataformData__dato {
         width: 50%;
@@ -76,7 +83,7 @@
             width: 45%;
             margin: auto;
             .cardPlataformData__dato__miniLogo__imagen {
-                width: 50%;
+                width: 40%;
                 position: relative;
                 top: 1px;
                 left: 6px;
@@ -100,7 +107,7 @@
             font-weight: 800;
             position: relative;
             letter-spacing: 1.5vw;
-            font-size: 4vw;
+            font-size: 20px;
         }
         .cardPlataformData__dato__descripcion {
             font-family: $fontPrincipal;
@@ -108,7 +115,7 @@
             top: 2vw;
             font-weight: 400;
             color: #A5A5A5;
-            font-size: 3vw;
+            font-size: 16px;
             width: 70%;
             left: 10%;
         }
@@ -183,14 +190,14 @@
                 font-family: $fontPrincipal;
                 font-weight: 400;
                 margin: 10% 2%;
-                font-size: 6vw;
+                font-size: 30px;
                 line-height: 9vw;
             }
             .cardsDescription__card__text__descripccion {
                 font-family: $fontSecundaria;
                 font-weight: 400;
                 margin: 10% 2%;
-                font-size: 3vw;
+                font-size: 14px;
                 line-height: 5vw;
             }
         }
@@ -204,31 +211,31 @@
         margin-bottom: 2%;
         font-family: $fontPrincipal;
         font-weight: 400;
-        font-size: 9vw;
+        font-size: 36px;
     }
 }
 .cardPricing {
-    height: 63vw;
-    width: 70vw;
+    height: 270px;
+    width: 80%;
     margin: auto;  
     padding: 0% 2%;
     border: 1px solid $colorPrincipal;
     border-radius: 10%; 
     margin-bottom: 15%;
     .cardPricing__columna {
-        height: 55vw;
-        width: 28vw;
+        height: 225px;
+        width: 35%;
         position: absolute;
-        margin-top: 10px;
+        margin-top: 30px;
         .cardPricing__columna__name {
-            margin-top: 13vw;
+            margin-top: 50px;
             width: 120%;
             font-family: $fontPrincipal;
-            font-size: 5vw;
+            font-size: 20px;
             font-weight: 700;
         }
         .cardPricing__columna__price {
-            font-size: 14vw;
+            font-size: 46px;
             width: 120%;
             font-family: $fontSecundaria;
             font-weight: 300;
@@ -237,29 +244,29 @@
         .cardPricing__columna__description {
             width: 120%;
             font-family: $fontPrincipal;
-            font-size: 2.5vw;
+            font-size: 12px;
             font-weight: 700;
         }
         .cardPricing__columna__ventajaDesventaja {
             display: inline-flex;
             width: 100%;
-            margin: 3.1vw 0;
+            margin: 10px 0;
             text-align: start;
-            margin-top: 4vw;
             .cardPricing__columna__ventajaDesventaja__img {
-                width: 9%;
+                width: 11px;
                 margin: auto 0;
             }
             .cardPricing__columna__ventajaDesventaja__titulo {
                 width: 80%;
                 margin-left: 10%;
-                font-size: 2.6vw;
+                font-size: 14px;
                 font-weight: 400;
+                font-family: $fontSecundaria;
             }
         }   
     }
     .cardPricing__columna--bigRigth {
-        width: 33vw;
+        width: 50%;
         position: relative;
         left: 53%;
     }
@@ -279,18 +286,82 @@
     border-color: $colorTerciario;
     .cardPricing__columna {
         .cardPricing__columna__price--green {
-            color: $colorSecundario;
+            color: $colorTerciario;
         }
     }
 }
 .cardPricing--big {
-    width: 90vw;
-    height: 65vw;
+    width: 90%;
+    height: 360px;
     padding-left: 3%;
-    box-shadow: 4px 4px 14px 1px $colorPrincipalOpacity;
+    box-shadow: 4px 4px 14px 1px $colorPrincipal;
     .cardPricing__columna {
-        margin-top: 4vw;
+        margin-top: 14px;
         margin-left: 10px;
+        width: 155px;
+        height: 320px;
+        padding-top: 55px;
+    }
+}
+
+.moneda {
+    position: absolute;
+    left: 4%;
+    font-family: $fontSecundaria;
+    font-size: 25px;
+    font-weight: 400;
+    color: black;
+    background: none;
+    border: none;
+    margin: 6px 0%;
+    width: 90px;
+    .moneda__option {
+        font-size: 15px;
+    }
+}
+
+.slider {
+    margin: 20% 0;
+    height: 56vw;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    .slider__img {
+        width: 100%;
+        height: 70%;
+    }
+    .slider__arrow {
+        width: 7%;
+        position: relative;
+        top: 26vw;
+        color: white;
+        right: 40%;
+        cursor: pointer;
+    }
+    .slider__arrow--right {
+        left: 40%;
+    }
+    .slider__circles {
+        position: relative;
+        top: 65%;
+        left: 35%;
+        display: flex;
+        justify-content: space-between;
+        width: 30%;
+        align-items: center;
+        .slider__circles__circle {
+            width: 2vw;
+            background-color: white;
+            height: 2vw;
+            border-radius: 100%;
+            opacity: 70%;
+            cursor: pointer;
+        }
+        .slider__circles__circle--big {
+            width: 2.5vw;
+            height: 2.5vw;
+            opacity: 1;
+        }
     }
 }
 
@@ -335,12 +406,16 @@
         letter-spacing: 3.28px;
         font-size: 4vw;
     }
-    .form__inpu {
+    .form__input {
         border: none;
         border-bottom: 1px solid #95989A;
         width: 80vw;
         height: 6vw;
         margin-bottom: 10%;
+        background: none;
+    }
+    .form__input--red {
+        border-color: red;
     }
     .form__personalData {
         .form__personalData__checkbox {
@@ -353,7 +428,7 @@
             gap: 0.5em;
             float: left;
             width: 4vw;
-            input {
+            .form__personalData__checkbox__input {
                 -webkit-appearance: none;
                 -moz-appearance: none;
                 appearance: none;
@@ -369,7 +444,10 @@
                 display: grid;
                 place-content: center;
             }
-            input::before {
+            .form__personalData__checkbox__input--red { 
+                border-color: red;
+            }
+            .form__personalData__checkbox__input::before {
                 content: "";
                 width: 2.6vw;
                 height: 2.6vw;
@@ -380,10 +458,10 @@
                 box-shadow: inset 1em 1em var(--form-control-color);
                 background-color: CanvasText;
             }
-            input:checked::before {
+            .form__personalData__checkbox__input:checked::before {
                 transform: scale(1);
             }
-            input:disabled {
+            .form__personalData__checkbox__input:disabled {
                 --form-control-color: var(--form-control-disabled);
                 color: var(--form-control-disabled);
                 cursor: not-allowed;
@@ -392,7 +470,7 @@
         .form__personalData__text {
             display: inline-block;
             width: 72vw;
-            margin-left: 10px;
+            margin-left: 5%;
             position: relative;
             bottom: 5px;
             font-family: $fontSecundaria;
@@ -405,15 +483,13 @@
 
 @media only screen and (min-width: 1000px) {
     .cardOpenShop {
-        margin: 10% 0 2% 0;
+        margin: 200px 0 100px 0;
         .cardOpenShop__titulo {
-            font-size: 3vw;
+            font-size: 49px;
             margin-bottom: 0%;
         }
         .cardOpenShop__descripcion {
-            font-size: 1vw;
-            margin: 2% auto;
-            height: 2vw;
+            width: 400px;
         }
         .cardOpenShop__imagen {
             width: 100%;
@@ -426,13 +502,8 @@
     }
 
     .botonDefault {
-        width: 30%;
-        height: 6vw;
-        margin: 1% auto;
-        span {
-            font-size: 1.5vw;
-            padding-top: 2vw;
-        }
+        width: 440px;
+        cursor: pointer;
     }
     .botonDefault--small {
         bottom: -1.5vw;
@@ -440,7 +511,7 @@
         height: 3vw;
         span {
             padding-top: 1vw;
-            font-size: 0.9vw;
+            font-size: 13px;
         }
     }
 
@@ -450,7 +521,7 @@
         margin: 5% 0 0 auto;
         span {
             padding-top: 1.5vw;
-            font-size: 0.8vw;
+            font-size: 13px;
         }
     }
 
@@ -459,7 +530,7 @@
         flex-wrap: wrap;
         justify-content: center;
         .cardPlataformData__titulo {
-            font-size: 2vw;
+            font-size: 36px;
             font-weight: 400;
             width: 100%;
         }
@@ -532,13 +603,13 @@
                 .cardsDescription__card__text__titulo {
                     width: 80%;
                     margin: 10% 0 5% 5%;
-                    font-size: 2.3vw;
+                    font-size: 36px;
                     line-height: 2.63vw;
                 }
                 .cardsDescription__card__text__descripccion {
                     width: 55%;
                     margin: 2% 5%;
-                    font-size: 1vw;
+                    font-size: 16px;
                     line-height: 1.4vw;
                 }
             }
@@ -606,35 +677,39 @@
     .pricing {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         .pricing__title {
-            width: 100%;
-            font-size: 4vw;
+            width: 10%;
+            margin-right: 31%;
         }
         .cardPricing {
             height: auto;
-            width: 25vw;
+            width: 20%;
             margin: 0;
             display: flex;
             flex-wrap: wrap;
+            color: $colorPrincipal;
             .cardPricing__columna {
                 width: 100%;
                 position: static;
                 height: 25%;
                 margin-left: 0;
+                padding: 0;
                 .cardPricing__columna__name {
                     margin-top: 1vw;
                     width: 100%;
-                    font-size: 2vw;
+                    font-size: 21px;
+                    color: black;
                 }
                 .cardPricing__columna__price {
                     width: 100%;
-                    font-size: 4vw;
+                    font-size: 46px;
                 }
                 .cardPricing__columna__description {
                     width: 100%;
-                    font-size: 0.8vw;
+                    font-size: 12px;
+                    color: black;
                 }
             }
             .cardPricing__columna--bigRigth {
@@ -644,27 +719,45 @@
                 .cardPricing__columna__ventajaDesventaja {
                     margin: 5% 0;
                     justify-content: center;
-                    .cardPricing__columna__ventajaDesventaja__img {
-                        width: 5%;
-                    }
                     .cardPricing__columna__ventajaDesventaja__titulo {
-                        font-size: 1vw;
                         width: auto;
                         margin-left: 5%;
                         text-align: center;
+                        color: black;
                     }
                 }
             }
         }
+        .cardPricing--pink {
+            color: $colorSecundario;
+        }
+        .cardPricing--green {
+            color: $colorTerciario;
+        }
         .cardPricing--big {
-            width: 30vw;
-            height: 40vw;
+            box-shadow: none;
+            margin: 0 5%;
+        }
+        .cardPricing:hover {
+            transform: scale(110%);
             padding: 0 2%;
+            box-shadow: 4px 4px 14px 1px currentColor;
             .cardPricing__columna--bigRigth {
                 height: 47%;
             }
         }
+    }
 
+    .moneda {
+        position: static;
+        font-size: 25px;
+        width: 10%;
+        padding: 0;
+        margin-left: 32%;
+        margin-bottom: 2%;
+        .moneda__option {
+            font-size: 20px;
+        }
     }
 
     .information {
@@ -705,7 +798,7 @@
             .form__title {
                 font-size: 0.64vw;
             }
-            .form__inpu {
+            .form__input {
                 width: 100%;
                 height: 3vw;
                 font-size: 1.5vw;
@@ -715,17 +808,17 @@
                 width: 100%;
                 .form__personalData__checkbox {
                     width: 2vw;
-                    input {
+                    .form__personalData__checkbox__input {
                         width: 1.5vw;
                         height: 1.5vw;
                     }
-                    input::before {
+                    .form__personalData__checkbox__input::before {
                         width: 0.8vw;
                         height: 0.8vw;
                     }
                 }
                 .form__personalData__text {
-                    width: 89%;
+                    width: 85%;
                     font-size: 0.7vw;
                 }
             }
