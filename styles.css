@@ -686,6 +686,12 @@ body {
     width: 100%;
     position: static;
     display: block;
+<<<<<<< HEAD
+=======
+  }
+  .cardOpenShop .cardOpenShop__imagen--small {
+    display: none;
+>>>>>>> 32f1fc5e7846c16e46fd018b8f6126a39fd23554
   }
   .cardOpenShop .cardOpenShop__imagen--small {
     display: none;
